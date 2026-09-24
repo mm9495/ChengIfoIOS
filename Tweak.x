@@ -78,11 +78,9 @@ static int OVSSysctlCopyString(void *oldp, size_t *oldlenp, const char *value) {
 
 %hook NSProcessInfo
 - (NSOperatingSystemVersion)operatingSystemVersion {
-    if (!OVSShouldSpoofOSCapability()) {
-        NSOperatingSystemVersion original = %orig;
-        return original;
-    }
-    return OVSSpoofedOSVersion();
+    // Keep framework availability checks tied to the real OS. Advertising a
+    // future OS on iOS 15 can select unavailable APIs and crash the process.
+    return %orig;
 }
 
 - (NSString *)operatingSystemVersionString {
@@ -93,17 +91,7 @@ static int OVSSysctlCopyString(void *oldp, size_t *oldlenp, const char *value) {
 }
 
 - (BOOL)isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion)version {
-    if (!OVSShouldSpoofOSCapability()) {
-        return %orig;
-    }
-    NSOperatingSystemVersion spoofed = OVSSpoofedOSVersion();
-    if (spoofed.majorVersion != version.majorVersion) {
-        return spoofed.majorVersion > version.majorVersion;
-    }
-    if (spoofed.minorVersion != version.minorVersion) {
-        return spoofed.minorVersion > version.minorVersion;
-    }
-    return spoofed.patchVersion >= version.patchVersion;
+    return %orig;
 }
 
 - (NSString *)hostName {
@@ -403,9 +391,6 @@ static void OVSApplyWebViewUserAgent(id webView) {
     BOOL handled = NO;
     if (OVSShouldSpoofOSVersion() && strcmp(name, "kern.osproductversion") == 0) {
         result = OVSSysctlCopyString(oldp, oldlenp, OVSSpoofedOSVersionString().UTF8String);
-        handled = YES;
-    } else if (OVSShouldSpoofOSVersion() && strcmp(name, "kern.osversion") == 0) {
-        result = OVSSysctlCopyString(oldp, oldlenp, OVSSpoofedBuildNumber().UTF8String);
         handled = YES;
     } else if (OVSShouldSpoofHostName() && strcmp(name, "kern.hostname") == 0) {
         result = OVSSysctlCopyString(oldp, oldlenp, OVSSpoofedHostName().UTF8String);
