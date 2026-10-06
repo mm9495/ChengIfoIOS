@@ -61,64 +61,65 @@ extern char **environ;
             @{@"kind": @"nav", @"title": @"选择应用", @"detail": @"Shopee仅清除数据。其他应用勾选后需Respring"}
         ],
         @[
-           @{@"kind": @"text", @"title": @"型号", @"keys": @[@"spoofedModel", @"customDeviceModel"], @"placeholder": @"iPhone16,2"},
+            @{@"kind": @"text", @"title": @"型号", @"keys": @[@"spoofedModel", @"customDeviceModel"], @"placeholder": @"iPhone16,2"},
             @{@"kind": @"text", @"title": @"名称", @"keys": @[@"spoofedName", @"customDeviceName"], @"placeholder": @"iPhone"},
             @{@"kind": @"text", @"title": @"iOS", @"keys": @[@"spoofedSystemVersion", @"customOSVersion"], @"placeholder": @"18.6.1"},
             @{@"kind": @"text", @"title": @"版本号", @"keys": @[@"spoofedBuild", @"customBuildNumber"], @"placeholder": @"22G100"},
             @{@"kind": @"text", @"title": @"主机名", @"keys": @[@"spoofedHostname", @"customHostName"], @"placeholder": @"iPhone.local"},
             @{@"kind": @"info", @"title": @"User-Agent", @"keys": @[@"spoofedUserAgent"]},
+        ],
         @[
             @{@"kind": @"switch", @"title": @"使用自定义iOS版本", @"key": @"useCustomOSVersion", @"defaultOn": @NO},
-            @{@"kind": @"text", @"title": @"自定义版本", @"keys": @[@\"customOSVersion\", @\"spoofedSystemVersion\"], @"placeholder": @"18.6.1"},
-            @{@"kind": @"text", @"title": @"自定义版本号", @"keys": @[@\"customBuildNumber\", @\"spoofedBuild\"], @"placeholder": @"22G100"}
+            @{@"kind": @"text", @"title": @"自定义版本", @"keys": @[@"customOSVersion", @"spoofedSystemVersion"], @"placeholder": @"18.6.1"},
+            @{@"kind": @"text", @"title": @"自定义版本号", @"keys": @[@"customBuildNumber", @"spoofedBuild"], @"placeholder": @"22G100"}
         ],
         @[
             @{@"kind": @"switch", @"title": @"伪装应用版本", @"key": @"appVersionEnabled", @"defaultOn": @NO},
-            @{@"kind": @"text", @"title": @"应用版本", @"keys": @[@\"customAppVersion\"], @"placeholder": @"3.2.1"}
+            @{@"kind": @"text", @"title": @"应用版本", @"keys": @[@"customAppVersion"], @"placeholder": @"3.2.1"}
         ],
         @[
             @{@"kind": @"switch", @"title": @"伪装名称/主机名/ID", @"key": @"deviceIdentityEnabled", @"defaultOn": @NO}
         ],
         @[
             @{@"kind": @"switch", @"title": @"伪装区域设置", @"key": @"localeEnabled", @"defaultOn": @NO},
-            @{@"kind": @"text", @"title": @"区域", @"keys": @[@\"localeIdentifier\"], @"placeholder": @"vi_VN"},
-            @{@"kind": @"text", @"title": @"时区", @"keys": @[@\"timeZoneName\"], @"placeholder": @"Asia/Ho_Chi_Minh"}
+            @{@"kind": @"text", @"title": @"区域", @"keys": @[@"localeIdentifier"], @"placeholder": @"vi_VN"},
+            @{@"kind": @"text", @"title": @"时区", @"keys": @[@"timeZoneName"], @"placeholder": @"Asia/Ho_Chi_Minh"}
         ],
         @[
             @{@"kind": @"switch", @"title": @"伪装运营商", @"key": @"carrierEnabled", @"defaultOn": @NO},
-            @{@"kind": @"text", @"title": @"运营商", @"keys": @[@\"carrierName\"], @"placeholder": @"Viettel"},
-            @{@"kind": @"text", @"title": @"MCC", @"keys": @[@\"mobileCountryCode\"], @"placeholder": @"452"},
-            @{@"kind": @"text", @"title": @"MNC", @"keys": @[@\"mobileNetworkCode\"], @"placeholder": @"04"},
-            @{@"kind": @"text", @"title": @"ISO", @"keys": @[@\"isoCountryCode\"], @"placeholder": @"vn"}
+            @{@"kind": @"text", @"title": @"运营商", @"keys": @[@"carrierName"], @"placeholder": @"Viettel"},
+            @{@"kind": @"text", @"title": @"MCC", @"keys": @[@"mobileCountryCode"], @"placeholder": @"452"},
+            @{@"kind": @"text", @"title": @"MNC", @"keys": @[@"mobileNetworkCode"], @"placeholder": @"04"},
+            @{@"kind": @"text", @"title": @"ISO", @"keys": @[@"isoCountryCode"], @"placeholder": @"vn"}
         ],
         @[
             @{@"kind": @"switch", @"title": @"伪装位置", @"key": @"locationEnabled", @"defaultOn": @NO},
-            @{@"kind": @"text", @"title": @"纬度", @"keys": @[@\"latitude\"], @"placeholder": @"10.762"},
-            @{@"kind": @"text", @"title": @"经度", @"keys": @[@\"longitude\"], @"placeholder": @"106.660"},
-            @{@"kind": @"text", @"title": @"海拔", @"keys": @[@\"altitude\"], @"placeholder": @"10"},
-            @{@"kind": @"text", @"title": @"精度", @"keys": @[@\"accuracy\"], @"placeholder": @"12"},
-            @{@"kind": @"text", @"title": @"GPX路径", @"keys": @[@\"gpxPath\"], @"placeholder": @"/var/mobile/Media/ChengIOS/route.gpx"}
+            @{@"kind": @"text", @"title": @"纬度", @"keys": @[@"latitude"], @"placeholder": @"10.762"},
+            @{@"kind": @"text", @"title": @"经度", @"keys": @[@"longitude"], @"placeholder": @"106.660"},
+            @{@"kind": @"text", @"title": @"海拔", @"keys": @[@"altitude"], @"placeholder": @"10"},
+            @{@"kind": @"text", @"title": @"精度", @"keys": @[@"accuracy"], @"placeholder": @"12"},
+            @{@"kind": @"text", @"title": @"GPX路径", @"keys": @[@"gpxPath"], @"placeholder": @"/var/mobile/Media/ChengIOS/route.gpx"}
         ],
         @[
             @{@"kind": @"switch", @"title": @"伪装网络/Wi-Fi", @"key": @"networkEnabled", @"defaultOn": @NO},
-            @{@"kind": @"text", @"title": @"接口", @"keys": @[@\"interfaceName\"], @"placeholder": @"en0"},
-            @{@"kind": @"text", @"title": @"IPv4", @"keys": @[@\"ipv4Address\"], @"placeholder": @"192.168.1.20"},
-            @{@"kind": @"text", @"title": @"IPv6", @"keys": @[@\"ipv6Address\"], @"placeholder": @"2001:db8::1"},
-            @{@"kind": @"text", @"title": @"MAC", @"keys": @[@\"macAddress\", @\"wifiAddress\"], @"placeholder": @"02:00:00:00:00:01"},
-            @{@"kind": @"text", @"title": @"SSID", @"keys": @[@\"wifiSSID\"], @"placeholder": @"Viettel-5G"},
-            @{@"kind": @"text", @"title": @"BSSID", @"keys": @[@\"wifiBSSID\"], @"placeholder": @"50:c7:bf:12:34:56"},
-            @{@"kind": @"text", @"title": @"网关", @"keys": @[@\"wifiGateway\"], @"placeholder": @"192.168.1.1"},
-            @{@"kind": @"text", @"title": @"RSSI", @"keys": @[@\"wifiRSSI\"], @"placeholder": @"-52"}
+            @{@"kind": @"text", @"title": @"接口", @"keys": @[@"interfaceName"], @"placeholder": @"en0"},
+            @{@"kind": @"text", @"title": @"IPv4", @"keys": @[@"ipv4Address"], @"placeholder": @"192.168.1.20"},
+            @{@"kind": @"text", @"title": @"IPv6", @"keys": @[@"ipv6Address"], @"placeholder": @"2001:db8::1"},
+            @{@"kind": @"text", @"title": @"MAC", @"keys": @[@"macAddress", @"wifiAddress"], @"placeholder": @"02:00:00:00:00:01"},
+            @{@"kind": @"text", @"title": @"SSID", @"keys": @[@"wifiSSID"], @"placeholder": @"Viettel-5G"},
+            @{@"kind": @"text", @"title": @"BSSID", @"keys": @[@"wifiBSSID"], @"placeholder": @"50:c7:bf:12:34:56"},
+            @{@"kind": @"text", @"title": @"网关", @"keys": @[@"wifiGateway"], @"placeholder": @"192.168.1.1"},
+            @{@"kind": @"text", @"title": @"RSSI", @"keys": @[@"wifiRSSI"], @"placeholder": @"-52"}
         ],
         @[
-            @{@"kind": @"text", @"title": @"主板", @"keys": @[@\"hwModelStr\"], @"placeholder": @"D84AP"},
-            @{@"kind": @"text", @"title": @"芯片", @"keys": @[@\"hardwarePlatform\"], @"placeholder": @"t8130"},
-            @{@"kind": @"text", @"title": @"序列号", @"keys": @[@\"spoofedSerialNumber\"], @"placeholder": @"C02XXXXXX"},
-            @{@"kind": @"text", @"title": @"UDID", @"keys": @[@\"spoofedUniqueDeviceID\"], @"placeholder": @"40-hex"},
-            @{@"kind": @"text", @"title": @"IDFV", @"keys": @[@\"spoofedVendorUUID\"], @"placeholder": @"UUID"},
-            @{@"kind": @"text", @"title": @"IMEI", @"keys": @[@\"spoofedIMEI\"], @"placeholder": @"15位数字"},
-            @{@"kind": @"text", @"title": @"Wi-Fi MAC", @"keys": @[@\"wifiAddress\"], @"placeholder": @"02:00:00:00:00:01"},
-            @{@"kind": @"text", @"title": @"蓝牙 MAC", @"keys": @[@\"bluetoothAddress\"], @"placeholder": @"02:00:00:00:00:02"}
+            @{@"kind": @"text", @"title": @"主板", @"keys": @[@"hwModelStr"], @"placeholder": @"D84AP"},
+            @{@"kind": @"text", @"title": @"芯片", @"keys": @[@"hardwarePlatform"], @"placeholder": @"t8130"},
+            @{@"kind": @"text", @"title": @"序列号", @"keys": @[@"spoofedSerialNumber"], @"placeholder": @"C02XXXXXX"},
+            @{@"kind": @"text", @"title": @"UDID", @"keys": @[@"spoofedUniqueDeviceID"], @"placeholder": @"40-hex"},
+            @{@"kind": @"text", @"title": @"IDFV", @"keys": @[@"spoofedVendorUUID"], @"placeholder": @"UUID"},
+            @{@"kind": @"text", @"title": @"IMEI", @"keys": @[@"spoofedIMEI"], @"placeholder": @"15位数字"},
+            @{@"kind": @"text", @"title": @"Wi-Fi MAC", @"keys": @[@"wifiAddress"], @"placeholder": @"02:00:00:00:00:01"},
+            @{@"kind": @"text", @"title": @"蓝牙 MAC", @"keys": @[@"bluetoothAddress"], @"placeholder": @"02:00:00:00:00:02"}
         ],
         @[
             @{@"kind": @"button", @"title": @"打开ChengIOS设置", @"action": @"settings"},
