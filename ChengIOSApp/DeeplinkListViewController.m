@@ -8,39 +8,39 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"Deeplink";
+    self.title = @"深度链接";
     self.items = @[
-        @{@"title": @"Random Info May", @"url": @"chengios://random-identity"},
-        @{@"title": @"Random Toan Bo", @"url": @"chengios://random-all"},
-        @{@"title": @"Random Viet Nam", @"url": @"chengios://random-all?region=vn"},
-        @{@"title": @"Random United States", @"url": @"chengios://random-all?region=us"},
-        @{@"title": @"Random Korea", @"url": @"chengios://random-all?region=kr"},
-        @{@"title": @"Random Japan", @"url": @"chengios://random-all?region=jp"},
-        @{@"title": @"Random United Kingdom", @"url": @"chengios://random-all?region=gb"},
-        @{@"title": @"Random Thailand", @"url": @"chengios://random-all?region=th"},
-        @{@"title": @"Random Singapore", @"url": @"chengios://random-all?region=sg"},
-        @{@"title": @"Random Australia", @"url": @"chengios://random-all?region=au"},
-        @{@"title": @"Random Taiwan", @"url": @"chengios://random-all?region=tw"},
-        @{@"title": @"Random theo vung", @"url": @"chengios://regions"},
-        @{@"title": @"Change Apps", @"url": @"chengios://apps"},
-        @{@"title": @"Xem ho so", @"url": @"chengios://profile"},
-        @{@"title": @"Sao chep ho so", @"url": @"chengios://copy"},
-        @{@"title": @"Mo Settings", @"url": @"chengios://settings"},
-        @{@"title": @"Quan ly Backup", @"url": @"chengios://backup"},
-        @{@"title": @"Backup ho so", @"url": @"chengios://backup-profile"},
-        @{@"title": @"Backup ho so + data app", @"url": @"chengios://backup-apps"},
-        @{@"title": @"Backup + Xoa + Random + Respring", @"url": @"chengios://backup-erase-random"},
-        @{@"title": @"Backup 1 app (Facebook)", @"url": @"chengios://backup-apps?bundle=com.facebook.Facebook"},
-        @{@"title": @"Restore backup moi nhat", @"url": @"chengios://restore-latest"},
-        @{@"title": @"Restore + data moi nhat", @"url": @"chengios://restore-latest?data=1"},
-        @{@"title": @"Xoa sach data app da chon", @"url": @"chengios://erase-apps"},
-        @{@"title": @"Xoa data Facebook", @"url": @"chengios://erase?bundle=com.facebook.Facebook"},
-        @{@"title": @"Xoa app da chon + Random Toan Bo", @"url": @"chengios://erase-random-all"},
-        @{@"title": @"Xoa data Shopee", @"url": @"chengios://erase?bundle=com.beeasy.shopee.vn"},
-        @{@"title": @"Xoa toan bo + Random Toan Bo", @"url": @"chengios://erase-device-random"},
+        @{@"title": @"随机生成设备信息", @"url": @"chengios://random-identity"},
+        @{@"title": @"随机生成全部", @"url": @"chengios://random-all"},
+        @{@"title": @"随机生成越南", @"url": @"chengios://random-all?region=vn"},
+        @{@"title": @"随机生成美国", @"url": @"chengios://random-all?region=us"},
+        @{@"title": @"随机生成韩国", @"url": @"chengios://random-all?region=kr"},
+        @{@"title": @"随机生成日本", @"url": @"chengios://random-all?region=jp"},
+        @{@"title": @"随机生成英国", @"url": @"chengios://random-all?region=gb"},
+        @{@"title": @"随机生成泰国", @"url": @"chengios://random-all?region=th"},
+        @{@"title": @"随机生成新加坡", @"url": @"chengios://random-all?region=sg"},
+        @{@"title": @"随机生成澳大利亚", @"url": @"chengios://random-all?region=au"},
+        @{@"title": @"随机生成台湾", @"url": @"chengios://random-all?region=tw"},
+        @{@"title": @"按地区随机生成", @"url": @"chengios://regions"},
+        @{@"title": @"选择应用", @"url": @"chengios://apps"},
+        @{@"title": @"查看配置", @"url": @"chengios://profile"},
+        @{@"title": @"复制配置", @"url": @"chengios://copy"},
+        @{@"title": @"打开设置", @"url": @"chengios://settings"},
+        @{@"title": @"备份管理", @"url": @"chengios://backup"},
+        @{@"title": @"备份配置", @"url": @"chengios://backup-profile"},
+        @{@"title": @"备份配置+应用数据", @"url": @"chengios://backup-apps"},
+        @{@"title": @"备份+清除+随机+Respring", @"url": @"chengios://backup-erase-random"},
+        @{@"title": @"备份1个应用（Facebook）", @"url": @"chengios://backup-apps?bundle=com.facebook.Facebook"},
+        @{@"title": @"恢复最新备份", @"url": @"chengios://restore-latest"},
+        @{@"title": @"恢复最新+数据", @"url": @"chengios://restore-latest?data=1"},
+        @{@"title": @"清除已选应用数据", @"url": @"chengios://erase-apps"},
+        @{@"title": @"清除Facebook数据", @"url": @"chengios://erase?bundle=com.facebook.Facebook"},
+        @{@"title": @"清除已选+随机生成全部", @"url": @"chengios://erase-random-all"},
+        @{@"title": @"清除Shopee数据", @"url": @"chengios://erase?bundle=com.beeasy.shopee.vn"},
+        @{@"title": @"清除全部+随机生成全部", @"url": @"chengios://erase-device-random"},
         @{@"title": @"Respring", @"url": @"chengios://respring"},
-        @{@"title": @"Random silent", @"url": @"chengios://random-all?silent=1"},
-        @{@"title": @"Random silent no respring", @"url": @"chengios://random-all?silent=1&norespring=1"}
+        @{@"title": @"随机生成（静默）", @"url": @"chengios://random-all?silent=1"},
+        @{@"title": @"随机生成（静默不Respring）", @"url": @"chengios://random-all?silent=1&norespring=1"}
     ];
 }
 
@@ -51,7 +51,7 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
     (void)tableView; (void)section;
-    return @"An 1 dong de sao chep URL. Shortcuts: thao tac Mo URL.";
+    return @"点击条目复制URL。快捷指令：使用\"打开URL\"操作。";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -71,10 +71,10 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSString *url = self.items[indexPath.row][@"url"];
     [UIPasteboard generalPasteboard].string = url;
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Da sao chep"
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"已复制"
                                                                    message:url
                                                             preferredStyle:UIAlertControllerStyleAlert];
-    [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil]];
     [self presentViewController:alert animated:YES completion:nil];
 }
 
