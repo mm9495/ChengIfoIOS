@@ -102,7 +102,7 @@ static NSString * const kSafariBundleID = @"com.apple.mobilesafari";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"Change Apps";
+    self.title = @"选择应用";
     [self loadPrefs];
     [self loadApps];
 
@@ -129,15 +129,15 @@ static NSString * const kSafariBundleID = @"com.apple.mobilesafari";
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     (void)tableView;
-    return section == 0 ? @"Safari" : @"Apps";
+    return section == 0 ? @"Safari 浏览器" : @"应用列表";
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
     (void)tableView;
     if (section == 0) {
-        return @"Safari lu\u00f4n \u1edf \u0111\u1ea7u danh s\u00e1ch.";
+        return @"Safari 始终显示在列表首位。";
     }
-    return @"Shopee chi xoa data, khong inject (tranh captcha). App khac: Respring sau khi tick.";
+    return @"Shopee 仅清除数据，不注入（避免验证码）。其他应用：勾选后需注销重启。";
 }
 
 - (NSString *)bundleIdForIndexPath:(NSIndexPath *)indexPath {
