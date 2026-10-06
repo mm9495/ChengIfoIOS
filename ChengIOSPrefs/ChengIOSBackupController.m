@@ -13,7 +13,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"Backup / Data";
+    self.title = @"备份 / 数据";
     self.backups = @[];
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     self.tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
@@ -46,7 +46,7 @@
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:title
                                                                    message:message
                                                             preferredStyle:UIAlertControllerStyleAlert];
-    [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil]];
     [self presentViewController:alert animated:YES completion:nil];
 }
 
@@ -65,13 +65,13 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     (void)tableView;
-    return section == 0 ? @"Thao tac" : @"Danh sach backup";
+    return section == 0 ? @"操作选项" : @"备份列表";
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
     (void)tableView;
     if (section == 0) {
-        return @"Backup ho so chay ngay trong Settings. Backup/xoa data app mo app ChengIOS (no-sandbox). Safari/he thong khong bi xoa.";
+        return @"在设置中可立即备份环境配置。备份/清除应用数据需打开 ChengIOS 应用（无沙盒限制）。Safari 和系统数据不会被清除。";
     }
     return ChengIOSBackupRoot();
 }
@@ -86,13 +86,13 @@
     cell.selectionStyle = UITableViewCellSelectionStyleDefault;
     if (indexPath.section == 0) {
         NSArray *titles = @[
-            @"Backup ho so hien tai",
-            @"Backup ho so + data app (mo app)",
-            @"Xoa sach data app da chon (mo app)",
-            @"Mo Quan ly Backup (app)"
+            @"备份当前环境配置",
+            @"备份环境 + 应用数据（打开应用）",
+            @"清除已选应用数据（打开应用）",
+            @"打开备份管理器（应用）"
         ];
         NSArray *details = @[
-            @"Luu identity vao Media/ChengIOS/Backups",
+            @"保存环境配置到 Media/ChengIOS/Backups",
             @"chengios://backup-apps",
             @"chengios://erase-apps",
             @"chengios://backup"
@@ -102,8 +102,8 @@
         return cell;
     }
     if (self.backups.count == 0) {
-        cell.textLabel.text = @"Chua co backup";
-        cell.detailTextLabel.text = @"Tao backup ho so o tren.";
+        cell.textLabel.text = @"暂无备份";
+        cell.detailTextLabel.text = @"请在上方创建环境配置备份。";
         cell.accessoryType = UITableViewCellAccessoryNone;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
@@ -111,7 +111,7 @@
     NSDictionary *item = self.backups[indexPath.row];
     cell.textLabel.text = item[@"name"] ?: item[@"id"];
     NSArray *bundles = item[@"bundles"];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@  ·  %@", item[@"created"] ?: @"", [item[@"includeAppData"] boolValue] ? [NSString stringWithFormat:@"%lu app", (unsigned long)[bundles count]] : @"ho so"];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@  ·  %@", item[@"created"] ?: @"", [item[@"includeAppData"] boolValue] ? [NSString stringWithFormat:@"%lu 个应用", (unsigned long)[bundles count]] : @"环境配置"];
     return cell;
 }
 
@@ -137,25 +137,25 @@
     UIAlertController *sheet = [UIAlertController alertControllerWithTitle:item[@"name"] ?: backupID
                                                                    message:item[@"created"]
                                                             preferredStyle:UIAlertControllerStyleActionSheet];
-    [sheet addAction:[UIAlertAction actionWithTitle:@"Restore ho so" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+    [sheet addAction:[UIAlertAction actionWithTitle:@"恢复环境配置" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         (void)action;
         NSError *error = nil;
         if (ChengIOSRestoreBackup(backupID, YES, NO, &error)) {
-            [self alertTitle:@"Da restore ho so" message:@"Force-quit app dich roi mo lai."];
+            [self alertTitle:@"恢复成功" message:@"请强制关闭目标应用后重新打开。"];
         } else {
-            [self alertTitle:@"Restore loi" message:ChengIOSBackupErrorMessage(error)];
+            [self alertTitle:@"恢复失败" message:ChengIOSBackupErrorMessage(error)];
         }
     }]];
-    [sheet addAction:[UIAlertAction actionWithTitle:@"Restore ho so + data (mo app)" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+    [sheet addAction:[UIAlertAction actionWithTitle:@"恢复环境 + 数据（打开应用）" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         (void)action;
         [self openURLString:[NSString stringWithFormat:@"chengios://restore?id=%@&data=1", backupID]];
     }]];
-    [sheet addAction:[UIAlertAction actionWithTitle:@"Xoa backup nay" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+    [sheet addAction:[UIAlertAction actionWithTitle:@"删除此备份" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
         (void)action;
         ChengIOSDeleteBackup(backupID, nil);
         [self reloadBackups];
     }]];
-    [sheet addAction:[UIAlertAction actionWithTitle:@"Huy" style:UIAlertActionStyleCancel handler:nil]];
+    [sheet addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
     UIPopoverPresentationController *pop = sheet.popoverPresentationController;
     if (pop) {
         pop.sourceView = tableView;
@@ -165,24 +165,24 @@
 }
 
 - (void)backupProfile {
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Backup ho so"
-                                                                   message:@"Luu identity ChengIOS hien tai."
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"备份环境配置"
+                                                                   message:@"保存当前 ChengIOS 环境配置。"
                                                             preferredStyle:UIAlertControllerStyleAlert];
     [alert addTextFieldWithConfigurationHandler:^(UITextField *field) {
         field.text = ChengIOSSuggestedBackupName();
-        field.placeholder = @"Ten backup";
+        field.placeholder = @"备份名称";
         field.clearButtonMode = UITextFieldViewModeWhileEditing;
     }];
-    [alert addAction:[UIAlertAction actionWithTitle:@"Huy" style:UIAlertActionStyleCancel handler:nil]];
-    [alert addAction:[UIAlertAction actionWithTitle:@"Backup" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+    [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"备份" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         (void)action;
         NSError *error = nil;
         NSDictionary *meta = ChengIOSCreateBackup(alert.textFields.firstObject.text, @[], NO, &error);
         if (meta && !error) {
             [self reloadBackups];
-            [self alertTitle:@"Da backup" message:[NSString stringWithFormat:@"%@\nID: %@", meta[@"name"], meta[@"id"]]];
+            [self alertTitle:@"备份成功" message:[NSString stringWithFormat:@"%@\nID: %@", meta[@"name"], meta[@"id"]]];
         } else {
-            [self alertTitle:@"Backup loi" message:ChengIOSBackupErrorMessage(error)];
+            [self alertTitle:@"备份失败" message:ChengIOSBackupErrorMessage(error)];
         }
     }]];
     [self presentViewController:alert animated:YES completion:nil];
