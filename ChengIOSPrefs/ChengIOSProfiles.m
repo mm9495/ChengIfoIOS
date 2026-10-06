@@ -1198,16 +1198,16 @@ NSDictionary *ChengIOSRandomFullProfileInRegion(NSString *iso) {
 
 NSArray<NSDictionary *> *ChengIOSRegionChoices(void) {
     return @[
-        @{@"iso": @"", @"title": @"Theo IP public"},
-        @{@"iso": @"vn", @"title": @"Viet Nam"},
-        @{@"iso": @"us", @"title": @"United States"},
-        @{@"iso": @"kr", @"title": @"Korea"},
-        @{@"iso": @"jp", @"title": @"Japan"},
-        @{@"iso": @"gb", @"title": @"United Kingdom"},
-        @{@"iso": @"th", @"title": @"Thailand"},
-        @{@"iso": @"sg", @"title": @"Singapore"},
-        @{@"iso": @"au", @"title": @"Australia"},
-        @{@"iso": @"tw", @"title": @"Taiwan"}
+        @{@"iso": @"", @"title": @"自动（根据公网IP）"},
+        @{@"iso": @"vn", @"title": @"越南"},
+        @{@"iso": @"us", @"title": @"美国"},
+        @{@"iso": @"kr", @"title": @"韩国"},
+        @{@"iso": @"jp", @"title": @"日本"},
+        @{@"iso": @"gb", @"title": @"英国"},
+        @{@"iso": @"th", @"title": @"泰国"},
+        @{@"iso": @"sg", @"title": @"新加坡"},
+        @{@"iso": @"au", @"title": @"澳大利亚"},
+        @{@"iso": @"tw", @"title": @"台湾"}
     ];
 }
 
@@ -1224,17 +1224,17 @@ NSString *ChengIOSProfileSummary(NSDictionary *profile) {
         [text appendFormat:@"UA: %@\n", ua];
     }
     if ([profile[@"isoCountryCode"] length] || [profile[@"profileRegion"] length]) {
-        [text appendFormat:@"Vung: %@ (%@)\n", [profile[@"isoCountryCode"] uppercaseString] ?: @"-", profile[@"profileRegion"] ?: @"-"];
+        [text appendFormat:@"地区: %@ (%@)\n", [profile[@"isoCountryCode"] uppercaseString] ?: @"-", profile[@"profileRegion"] ?: @"-"];
     }
     if ([profile[@"publicIP"] length] || [profile[@"publicISP"] length]) {
         [text appendFormat:@"IP: %@ (%@)\n", profile[@"publicIP"] ?: @"-", profile[@"publicISP"] ?: @"-"];
     }
-    [text appendFormat:@"Tên: %@\n", profile[@"spoofedName"]];
-    [text appendFormat:@"Host: %@", profile[@"spoofedHostname"]];
+    [text appendFormat:@"名称: %@\n", profile[@"spoofedName"]];
+    [text appendFormat:@"主机: %@", profile[@"spoofedHostname"]];
     if ([profile[@"hwModelStr"] length] || [profile[@"spoofedSerialNumber"] length]) {
-        [text appendFormat:@"\nBoard: %@", profile[@"hwModelStr"] ?: @"-"];
-        [text appendFormat:@"\nChip: %@  RAM: %@ GB", profile[@"hardwarePlatform"] ?: @"-", profile[@"memoryGB"] ?: @"-"];
-        [text appendFormat:@"\nSerial: %@", profile[@"spoofedSerialNumber"] ?: @"-"];
+        [text appendFormat:@"\n主板: %@", profile[@"hwModelStr"] ?: @"-"];
+        [text appendFormat:@"\n芯片: %@  内存: %@ GB", profile[@"hardwarePlatform"] ?: @"-", profile[@"memoryGB"] ?: @"-"];
+        [text appendFormat:@"\n序列号: %@", profile[@"spoofedSerialNumber"] ?: @"-"];
         [text appendFormat:@"\nUDID: %@", profile[@"spoofedUniqueDeviceID"] ?: @"-"];
         [text appendFormat:@"\nIDFV: %@", profile[@"spoofedVendorUUID"] ?: @"-"];
         if ([profile[@"spoofedIMEI"] length]) {
@@ -1242,16 +1242,16 @@ NSString *ChengIOSProfileSummary(NSDictionary *profile) {
         }
     }
     if ([profile[@"localeIdentifier"] length] || [profile[@"wifiSSID"] length] || [profile[@"ipv4Address"] length]) {
-        [text appendFormat:@"\nLocale: %@ / %@", profile[@"localeIdentifier"], profile[@"timeZoneName"]];
-        [text appendFormat:@"\nNhà mạng: %@ (%@-%@)", profile[@"carrierName"], profile[@"mobileCountryCode"], profile[@"mobileNetworkCode"]];
+        [text appendFormat:@"\n区域设置: %@ / %@", profile[@"localeIdentifier"], profile[@"timeZoneName"]];
+        [text appendFormat:@"\n运营商: %@ (%@-%@)", profile[@"carrierName"], profile[@"mobileCountryCode"], profile[@"mobileNetworkCode"]];
         [text appendFormat:@"\nGPS: %@, %@ (%@)", profile[@"latitude"], profile[@"longitude"], profile[@"_city"] ?: @""];
-        [text appendFormat:@"\nLAN: %@ (web van thay IP cong cong nha mang)\nMAC: %@", profile[@"ipv4Address"], profile[@"macAddress"]];
+        [text appendFormat:@"\n局域网: %@（网页仍显示运营商公网IP）\nMAC: %@", profile[@"ipv4Address"], profile[@"macAddress"]];
         if ([profile[@"wifiSSID"] length] || [profile[@"wifiBSSID"] length]) {
             [text appendFormat:@"\nWi-Fi: %@", profile[@"wifiSSID"] ?: @"-"];
             [text appendFormat:@"\nBSSID: %@", profile[@"wifiBSSID"] ?: @"-"];
-            [text appendFormat:@"\nGW: %@  RSSI: %@", profile[@"wifiGateway"] ?: @"-", profile[@"wifiRSSI"] ?: @"-"];
+            [text appendFormat:@"\n网关: %@  信号: %@", profile[@"wifiGateway"] ?: @"-", profile[@"wifiRSSI"] ?: @"-"];
         }
-        [text appendFormat:@"\nApp: %@", profile[@"customAppVersion"]];
+        [text appendFormat:@"\n应用版本: %@", profile[@"customAppVersion"]];
     }
     return text;
 }
