@@ -61,13 +61,12 @@ extern char **environ;
             @{@"kind": @"nav", @"title": @"选择应用", @"detail": @"Shopee仅清除数据。其他应用勾选后需Respring"}
         ],
         @[
-            @{@"kind": @"text", @"title": @"型号", @"keys": @[@\"spoofedModel\", @\"customDeviceModel\"], @"placeholder": @"iPhone16,2"},
-            @{@"kind": @"text", @"title": @"名称", @"keys": @[@\"spoofedName\", @\"customDeviceName\"], @"placeholder": @"iPhone"},
-            @{@"kind": @"text", @"title": @"iOS", @"keys": @[@\"spoofedSystemVersion\", @\"customOSVersion\"], @"placeholder": @"18.6.1"},
-            @{@"kind": @"text", @"title": @"版本号", @"keys": @[@\"spoofedBuild\", @\"customBuildNumber\"], @"placeholder": @"22G100"},
-            @{@"kind": @"text", @"title": @"主机名", @"keys": @[@\"spoofedHostname\", @\"customHostName\"], @"placeholder": @"iPhone.local"},
-            @{@"kind": @"info", @"title": @"User-Agent", @"keys": @[@\"spoofedUserAgent\"]},
-        ],
+           @{@"kind": @"text", @"title": @"型号", @"keys": @[@"spoofedModel", @"customDeviceModel"], @"placeholder": @"iPhone16,2"},
+            @{@"kind": @"text", @"title": @"名称", @"keys": @[@"spoofedName", @"customDeviceName"], @"placeholder": @"iPhone"},
+            @{@"kind": @"text", @"title": @"iOS", @"keys": @[@"spoofedSystemVersion", @"customOSVersion"], @"placeholder": @"18.6.1"},
+            @{@"kind": @"text", @"title": @"版本号", @"keys": @[@"spoofedBuild", @"customBuildNumber"], @"placeholder": @"22G100"},
+            @{@"kind": @"text", @"title": @"主机名", @"keys": @[@"spoofedHostname", @"customHostName"], @"placeholder": @"iPhone.local"},
+            @{@"kind": @"info", @"title": @"User-Agent", @"keys": @[@"spoofedUserAgent"]},
         @[
             @{@"kind": @"switch", @"title": @"使用自定义iOS版本", @"key": @"useCustomOSVersion", @"defaultOn": @NO},
             @{@"kind": @"text", @"title": @"自定义版本", @"keys": @[@\"customOSVersion\", @\"spoofedSystemVersion\"], @"placeholder": @"18.6.1"},
