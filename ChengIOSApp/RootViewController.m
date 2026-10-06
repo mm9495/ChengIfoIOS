@@ -36,93 +36,93 @@ extern char **environ;
 - (NSArray<NSArray<NSDictionary *> *> *)buildSchema {
     return @[
         @[
-            @{@"kind": @"button", @"title": @"Random Info M\u00e1y", @"action": @"identity"},
-            @{@"kind": @"button", @"title": @"Random To\u00e0n B\u1ed9", @"action": @"full"},
-            @{@"kind": @"button", @"title": @"Xem h\u1ed3 s\u01a1", @"action": @"profile"},
-            @{@"kind": @"button", @"title": @"Sao ch\u00e9p h\u1ed3 s\u01a1", @"action": @"copy"},
-            @{@"kind": @"nav", @"title": @"Random theo vùng", @"page": @"region", @"detail": @"VN / US / KR / JP..."},
-            @{@"kind": @"nav", @"title": @"Deeplink / Shortcuts", @"page": @"deeplink", @"detail": @"chengios://"}
+            @{@"kind": @"button", @"title": @"随机生成设备信息", @"action": @"identity"},
+            @{@"kind": @"button", @"title": @"随机生成全部", @"action": @"full"},
+            @{@"kind": @"button", @"title": @"查看配置", @"action": @"profile"},
+            @{@"kind": @"button", @"title": @"复制配置", @"action": @"copy"},
+            @{@"kind": @"nav", @"title": @"按地区随机生成", @"page": @"region", @"detail": @"越南 / 美国 / 韩国 / 日本..."},
+            @{@"kind": @"nav", @"title": @"深度链接 / 快捷指令", @"page": @"deeplink", @"detail": @"chengios://"}
         ],
         @[
-            @{@"kind": @"nav", @"title": @"Quan ly Backup", @"page": @"backup", @"detail": @"Backup / Restore / Xoa data"},
-            @{@"kind": @"button", @"title": @"Backup ho so", @"action": @"backupProfile"},
-            @{@"kind": @"button", @"title": @"Backup ho so + data app", @"action": @"backupApps"},
-            @{@"kind": @"button", @"title": @"Backup + Xoa + Random + Respring", @"action": @"backupEraseRandom"},
-            @{@"kind": @"button", @"title": @"Xoa sach data app da chon", @"action": @"eraseApps"},
-            @{@"kind": @"button", @"title": @"Xoa app da chon + Random Toan Bo", @"action": @"eraseRandomAll"},
-            @{@"kind": @"button", @"title": @"Xoa toan bo + Random Toan Bo", @"action": @"eraseDeviceRandom"}
+            @{@"kind": @"nav", @"title": @"备份管理", @"page": @"backup", @"detail": @"备份 / 恢复 / 清除数据"},
+            @{@"kind": @"button", @"title": @"备份配置", @"action": @"backupProfile"},
+            @{@"kind": @"button", @"title": @"备份配置+应用数据", @"action": @"backupApps"},
+            @{@"kind": @"button", @"title": @"备份+清除+随机+Respring", @"action": @"backupEraseRandom"},
+            @{@"kind": @"button", @"title": @"清除已选应用数据", @"action": @"eraseApps"},
+            @{@"kind": @"button", @"title": @"清除已选+随机生成全部", @"action": @"eraseRandomAll"},
+            @{@"kind": @"button", @"title": @"清除全部+随机生成全部", @"action": @"eraseDeviceRandom"}
         ],
         @[
-            @{@"kind": @"switch", @"title": @"B\u1eadt ChengIOS", @"key": @"masterEnabled", @"defaultOn": @YES},
-            @{@"kind": @"switch", @"title": @"Spoof s\u00e2u (Gestalt / Darwin)", @"key": @"gestaltEnabled", @"defaultOn": @NO, @"detail": @"FB/Shopee b\u1ecf qua Gestalt; app th\u01b0\u1eddng m\u1edbi d\u00f9ng Darwin. Force-quit app \u0111\u00edch"},
-            @{@"kind": @"switch", @"title": @"An jailbreak / bypass", @"key": @"hideJailbreakEnabled", @"defaultOn": @NO, @"detail": @"An Cydia/Sileo/ElleKit. Shopee khong inject tweak. FB chi an file/URL. Force-quit"}
+            @{@"kind": @"switch", @"title": @"启用ChengIOS", @"key": @"masterEnabled", @"defaultOn": @YES},
+            @{@"kind": @"switch", @"title": @"深度伪装（Gestalt / Darwin）", @"key": @"gestaltEnabled", @"defaultOn": @NO, @"detail": @"Facebook/Shopee跳过Gestalt；普通应用才使用Darwin。需强制关闭目标应用"},
+            @{@"kind": @"switch", @"title": @"隐藏越狱 / 绕过检测", @"key": @"hideJailbreakEnabled", @"defaultOn": @NO, @"detail": @"隐藏Cydia/Sileo/ElleKit。Shopee不注入插件。Facebook仅隐藏文件/URL。需强制关闭"}
         ],
         @[
-            @{@"kind": @"nav", @"title": @"Change Apps", @"detail": @"Shopee chi xoa data. App khac can Respring sau khi tick"}
+            @{@"kind": @"nav", @"title": @"选择应用", @"detail": @"Shopee仅清除数据。其他应用勾选后需Respring"}
         ],
         @[
-            @{@"kind": @"text", @"title": @"Model", @"keys": @[@"spoofedModel", @"customDeviceModel"], @"placeholder": @"iPhone16,2"},
-            @{@"kind": @"text", @"title": @"T\u00ean", @"keys": @[@"spoofedName", @"customDeviceName"], @"placeholder": @"iPhone"},
-            @{@"kind": @"text", @"title": @"iOS", @"keys": @[@"spoofedSystemVersion", @"customOSVersion"], @"placeholder": @"18.6.1"},
-            @{@"kind": @"text", @"title": @"Build", @"keys": @[@"spoofedBuild", @"customBuildNumber"], @"placeholder": @"22G100"},
-            @{@"kind": @"text", @"title": @"Hostname", @"keys": @[@"spoofedHostname", @"customHostName"], @"placeholder": @"iPhone.local"},
-            @{@"kind": @"info", @"title": @"User-Agent", @"keys": @[@"spoofedUserAgent"]},
+            @{@"kind": @"text", @"title": @"型号", @"keys": @[@\"spoofedModel\", @\"customDeviceModel\"], @"placeholder": @"iPhone16,2"},
+            @{@"kind": @"text", @"title": @"名称", @"keys": @[@\"spoofedName\", @\"customDeviceName\"], @"placeholder": @"iPhone"},
+            @{@"kind": @"text", @"title": @"iOS", @"keys": @[@\"spoofedSystemVersion\", @\"customOSVersion\"], @"placeholder": @"18.6.1"},
+            @{@"kind": @"text", @"title": @"版本号", @"keys": @[@\"spoofedBuild\", @\"customBuildNumber\"], @"placeholder": @"22G100"},
+            @{@"kind": @"text", @"title": @"主机名", @"keys": @[@\"spoofedHostname\", @\"customHostName\"], @"placeholder": @"iPhone.local"},
+            @{@"kind": @"info", @"title": @"User-Agent", @"keys": @[@\"spoofedUserAgent\"]},
         ],
         @[
-            @{@"kind": @"switch", @"title": @"D\u00f9ng iOS t\u00f9y ch\u1ec9nh", @"key": @"useCustomOSVersion", @"defaultOn": @NO},
-            @{@"kind": @"text", @"title": @"Custom Version", @"keys": @[@"customOSVersion", @"spoofedSystemVersion"], @"placeholder": @"18.6.1"},
-            @{@"kind": @"text", @"title": @"Custom Build", @"keys": @[@"customBuildNumber", @"spoofedBuild"], @"placeholder": @"22G100"}
+            @{@"kind": @"switch", @"title": @"使用自定义iOS版本", @"key": @"useCustomOSVersion", @"defaultOn": @NO},
+            @{@"kind": @"text", @"title": @"自定义版本", @"keys": @[@\"customOSVersion\", @\"spoofedSystemVersion\"], @"placeholder": @"18.6.1"},
+            @{@"kind": @"text", @"title": @"自定义版本号", @"keys": @[@\"customBuildNumber\", @\"spoofedBuild\"], @"placeholder": @"22G100"}
         ],
         @[
-            @{@"kind": @"switch", @"title": @"Gi\u1ea3 l\u1eadp version App", @"key": @"appVersionEnabled", @"defaultOn": @NO},
-            @{@"kind": @"text", @"title": @"App Version", @"keys": @[@"customAppVersion"], @"placeholder": @"3.2.1"}
+            @{@"kind": @"switch", @"title": @"伪装应用版本", @"key": @"appVersionEnabled", @"defaultOn": @NO},
+            @{@"kind": @"text", @"title": @"应用版本", @"keys": @[@\"customAppVersion\"], @"placeholder": @"3.2.1"}
         ],
         @[
-            @{@"kind": @"switch", @"title": @"Gi\u1ea3 l\u1eadp t\u00ean / hostname / ID", @"key": @"deviceIdentityEnabled", @"defaultOn": @NO}
+            @{@"kind": @"switch", @"title": @"伪装名称/主机名/ID", @"key": @"deviceIdentityEnabled", @"defaultOn": @NO}
         ],
         @[
-            @{@"kind": @"switch", @"title": @"Gi\u1ea3 l\u1eadp locale", @"key": @"localeEnabled", @"defaultOn": @NO},
-            @{@"kind": @"text", @"title": @"Locale", @"keys": @[@"localeIdentifier"], @"placeholder": @"vi_VN"},
-            @{@"kind": @"text", @"title": @"Time Zone", @"keys": @[@"timeZoneName"], @"placeholder": @"Asia/Ho_Chi_Minh"}
+            @{@"kind": @"switch", @"title": @"伪装区域设置", @"key": @"localeEnabled", @"defaultOn": @NO},
+            @{@"kind": @"text", @"title": @"区域", @"keys": @[@\"localeIdentifier\"], @"placeholder": @"vi_VN"},
+            @{@"kind": @"text", @"title": @"时区", @"keys": @[@\"timeZoneName\"], @"placeholder": @"Asia/Ho_Chi_Minh"}
         ],
         @[
-            @{@"kind": @"switch", @"title": @"Gi\u1ea3 l\u1eadp nh\u00e0 m\u1ea1ng", @"key": @"carrierEnabled", @"defaultOn": @NO},
-            @{@"kind": @"text", @"title": @"Carrier", @"keys": @[@"carrierName"], @"placeholder": @"Viettel"},
-            @{@"kind": @"text", @"title": @"MCC", @"keys": @[@"mobileCountryCode"], @"placeholder": @"452"},
-            @{@"kind": @"text", @"title": @"MNC", @"keys": @[@"mobileNetworkCode"], @"placeholder": @"04"},
-            @{@"kind": @"text", @"title": @"ISO", @"keys": @[@"isoCountryCode"], @"placeholder": @"vn"}
+            @{@"kind": @"switch", @"title": @"伪装运营商", @"key": @"carrierEnabled", @"defaultOn": @NO},
+            @{@"kind": @"text", @"title": @"运营商", @"keys": @[@\"carrierName\"], @"placeholder": @"Viettel"},
+            @{@"kind": @"text", @"title": @"MCC", @"keys": @[@\"mobileCountryCode\"], @"placeholder": @"452"},
+            @{@"kind": @"text", @"title": @"MNC", @"keys": @[@\"mobileNetworkCode\"], @"placeholder": @"04"},
+            @{@"kind": @"text", @"title": @"ISO", @"keys": @[@\"isoCountryCode\"], @"placeholder": @"vn"}
         ],
         @[
-            @{@"kind": @"switch", @"title": @"Gi\u1ea3 l\u1eadp v\u1ecb tr\u00ed", @"key": @"locationEnabled", @"defaultOn": @NO},
-            @{@"kind": @"text", @"title": @"Latitude", @"keys": @[@"latitude"], @"placeholder": @"10.762"},
-            @{@"kind": @"text", @"title": @"Longitude", @"keys": @[@"longitude"], @"placeholder": @"106.660"},
-            @{@"kind": @"text", @"title": @"Altitude", @"keys": @[@"altitude"], @"placeholder": @"10"},
-            @{@"kind": @"text", @"title": @"Accuracy", @"keys": @[@"accuracy"], @"placeholder": @"12"},
-            @{@"kind": @"text", @"title": @"GPX Path", @"keys": @[@"gpxPath"], @"placeholder": @"/var/mobile/Media/ChengIOS/route.gpx"}
+            @{@"kind": @"switch", @"title": @"伪装位置", @"key": @"locationEnabled", @"defaultOn": @NO},
+            @{@"kind": @"text", @"title": @"纬度", @"keys": @[@\"latitude\"], @"placeholder": @"10.762"},
+            @{@"kind": @"text", @"title": @"经度", @"keys": @[@\"longitude\"], @"placeholder": @"106.660"},
+            @{@"kind": @"text", @"title": @"海拔", @"keys": @[@\"altitude\"], @"placeholder": @"10"},
+            @{@"kind": @"text", @"title": @"精度", @"keys": @[@\"accuracy\"], @"placeholder": @"12"},
+            @{@"kind": @"text", @"title": @"GPX路径", @"keys": @[@\"gpxPath\"], @"placeholder": @"/var/mobile/Media/ChengIOS/route.gpx"}
         ],
         @[
-            @{@"kind": @"switch", @"title": @"Gi\u1ea3 l\u1eadp m\u1ea1ng / Wi-Fi", @"key": @"networkEnabled", @"defaultOn": @NO},
-            @{@"kind": @"text", @"title": @"Interface", @"keys": @[@"interfaceName"], @"placeholder": @"en0"},
-            @{@"kind": @"text", @"title": @"IPv4", @"keys": @[@"ipv4Address"], @"placeholder": @"192.168.1.20"},
-            @{@"kind": @"text", @"title": @"IPv6", @"keys": @[@"ipv6Address"], @"placeholder": @"2001:db8::1"},
-            @{@"kind": @"text", @"title": @"MAC", @"keys": @[@"macAddress", @"wifiAddress"], @"placeholder": @"02:00:00:00:00:01"},
-            @{@"kind": @"text", @"title": @"SSID", @"keys": @[@"wifiSSID"], @"placeholder": @"Viettel-5G"},
-            @{@"kind": @"text", @"title": @"BSSID", @"keys": @[@"wifiBSSID"], @"placeholder": @"50:c7:bf:12:34:56"},
-            @{@"kind": @"text", @"title": @"Gateway", @"keys": @[@"wifiGateway"], @"placeholder": @"192.168.1.1"},
-            @{@"kind": @"text", @"title": @"RSSI", @"keys": @[@"wifiRSSI"], @"placeholder": @"-52"}
+            @{@"kind": @"switch", @"title": @"伪装网络/Wi-Fi", @"key": @"networkEnabled", @"defaultOn": @NO},
+            @{@"kind": @"text", @"title": @"接口", @"keys": @[@\"interfaceName\"], @"placeholder": @"en0"},
+            @{@"kind": @"text", @"title": @"IPv4", @"keys": @[@\"ipv4Address\"], @"placeholder": @"192.168.1.20"},
+            @{@"kind": @"text", @"title": @"IPv6", @"keys": @[@\"ipv6Address\"], @"placeholder": @"2001:db8::1"},
+            @{@"kind": @"text", @"title": @"MAC", @"keys": @[@\"macAddress\", @\"wifiAddress\"], @"placeholder": @"02:00:00:00:00:01"},
+            @{@"kind": @"text", @"title": @"SSID", @"keys": @[@\"wifiSSID\"], @"placeholder": @"Viettel-5G"},
+            @{@"kind": @"text", @"title": @"BSSID", @"keys": @[@\"wifiBSSID\"], @"placeholder": @"50:c7:bf:12:34:56"},
+            @{@"kind": @"text", @"title": @"网关", @"keys": @[@\"wifiGateway\"], @"placeholder": @"192.168.1.1"},
+            @{@"kind": @"text", @"title": @"RSSI", @"keys": @[@\"wifiRSSI\"], @"placeholder": @"-52"}
         ],
         @[
-            @{@"kind": @"text", @"title": @"Board", @"keys": @[@"hwModelStr"], @"placeholder": @"D84AP"},
-            @{@"kind": @"text", @"title": @"Chip", @"keys": @[@"hardwarePlatform"], @"placeholder": @"t8130"},
-            @{@"kind": @"text", @"title": @"Serial", @"keys": @[@"spoofedSerialNumber"], @"placeholder": @"C02XXXXXX"},
-            @{@"kind": @"text", @"title": @"UDID", @"keys": @[@"spoofedUniqueDeviceID"], @"placeholder": @"40-hex"},
-            @{@"kind": @"text", @"title": @"IDFV", @"keys": @[@"spoofedVendorUUID"], @"placeholder": @"UUID"},
-            @{@"kind": @"text", @"title": @"IMEI", @"keys": @[@"spoofedIMEI"], @"placeholder": @"15 digits"},
-            @{@"kind": @"text", @"title": @"Wi-Fi MAC", @"keys": @[@"wifiAddress"], @"placeholder": @"02:00:00:00:00:01"},
-            @{@"kind": @"text", @"title": @"BT MAC", @"keys": @[@"bluetoothAddress"], @"placeholder": @"02:00:00:00:00:02"}
+            @{@"kind": @"text", @"title": @"主板", @"keys": @[@\"hwModelStr\"], @"placeholder": @"D84AP"},
+            @{@"kind": @"text", @"title": @"芯片", @"keys": @[@\"hardwarePlatform\"], @"placeholder": @"t8130"},
+            @{@"kind": @"text", @"title": @"序列号", @"keys": @[@\"spoofedSerialNumber\"], @"placeholder": @"C02XXXXXX"},
+            @{@"kind": @"text", @"title": @"UDID", @"keys": @[@\"spoofedUniqueDeviceID\"], @"placeholder": @"40-hex"},
+            @{@"kind": @"text", @"title": @"IDFV", @"keys": @[@\"spoofedVendorUUID\"], @"placeholder": @"UUID"},
+            @{@"kind": @"text", @"title": @"IMEI", @"keys": @[@\"spoofedIMEI\"], @"placeholder": @"15位数字"},
+            @{@"kind": @"text", @"title": @"Wi-Fi MAC", @"keys": @[@\"wifiAddress\"], @"placeholder": @"02:00:00:00:00:01"},
+            @{@"kind": @"text", @"title": @"蓝牙 MAC", @"keys": @[@\"bluetoothAddress\"], @"placeholder": @"02:00:00:00:00:02"}
         ],
         @[
-            @{@"kind": @"button", @"title": @"M\u1edf C\u00e0i \u0111\u1eb7t ChengIOS", @"action": @"settings"},
+            @{@"kind": @"button", @"title": @"打开ChengIOS设置", @"action": @"settings"},
         ]
     ];
 }
@@ -132,7 +132,7 @@ extern char **environ;
     [super viewDidLoad];
     self.title = @"ChengIOS";
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Respring" style:UIBarButtonItemStylePlain target:self action:@selector(respring)];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Refresh" style:UIBarButtonItemStylePlain target:self action:@selector(reloadProfile)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"刷新" style:UIBarButtonItemStylePlain target:self action:@selector(reloadProfile)];
     [self reloadProfile];
 }
 
@@ -144,7 +144,7 @@ extern char **environ;
 - (void)reloadProfile {
     self.summary = ChengIOSProfileSummary(ChengIOSLoadSavedProfile());
     if (self.summary.length == 0) {
-        self.summary = @"Ch\u01b0a c\u00f3 h\u1ed3 s\u01a1. B\u1ea5m Random tr\u01b0\u1edbc.";
+        self.summary = @"暂无配置。请先点击随机生成。";
     }
     [self.tableView reloadData];
 }
@@ -187,9 +187,9 @@ extern char **environ;
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     (void)tableView;
     NSArray *titles = @[
-        @"Random", @"Backup / Data", @"Chung", @"Apps", @"Change Info", @"Phi\u00ean b\u1ea3n iOS", @"Phi\u00ean b\u1ea3n App",
-        @"\u0110\u1ecbnh danh", @"Locale", @"Nh\u00e0 m\u1ea1ng", @"V\u1ecb tr\u00ed", @"M\u1ea1ng / Wi-Fi",
-        @"Gestalt / ID", @"Kh\u00e1c"
+        @"随机生成", @"备份/数据", @"通用", @"应用", @"修改信息", @"iOS版本", @"应用版本",
+        @"身份标识", @"区域设置", @"运营商", @"位置", @"网络/Wi-Fi",
+        @"Gestalt/ID", @"其他"
     ];
     return titles[section];
 }
@@ -197,22 +197,22 @@ extern char **environ;
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
     (void)tableView;
     if (section == 0) {
-        return @"Mac dinh theo IP public: quoc gia, nha mang, GPS, locale, Wi-Fi. Web van thay IP that (can VPN neu muon US/KR). Random theo vung de ep tay.";
+        return @"默认根据公网IP：国家、运营商、GPS、区域设置、Wi-Fi。网页仍显示真实IP（如需美国/韩国请使用VPN）。按地区随机生成可手动指定。";
     }
     if (section == 1) {
-        return @"Shopee: khong inject tweak (tranh captcha), chi wipe data. Facebook/TikTok van spoof.";
+        return @"Shopee：不注入插件（避免验证码），仅清除数据。Facebook/TikTok仍进行伪装。";
     }
     if (section == 2) {
-        return @"Safari: tick Safari, vuot tat han roi mo lai tab. Facebook/Shopee van che do an toan. An jailbreak: force-quit app da chon.";
+        return @"Safari：勾选Safari，完全关闭后重新打开标签页。Facebook/Shopee仍保持安全模式。隐藏越狱：需强制关闭已选应用。";
     }
     if (section == 10) {
-        return @"GPS mac dinh lay theo IP public khi Random Toan Bo. Web/deviceinfo.me van hien IP that cua nha mang.";
+        return @"GPS默认根据公网IP获取。网页/deviceinfo.me仍显示运营商真实IP。";
     }
     if (section == 12) {
         return self.summary;
     }
     if (section == 13) {
-        return @"Force-quit app dich sau Random. Respring o goc tren trai, Refresh o goc tren phai.";
+        return @"随机生成后请强制关闭目标应用。Respring在左上角，刷新在右上角。";
     }
     return nil;
 }
@@ -276,7 +276,7 @@ extern char **environ;
     if ([kind isEqualToString:@"info"]) {
         cell.accessoryType = UITableViewCellAccessoryNone;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        cell.detailTextLabel.text = [self firstText:row[@"keys"]] ?: @"\u2014";
+        cell.detailTextLabel.text = [self firstText:row[@"keys"]] ?: @"—";
     } else if ([kind isEqualToString:@"copy"]) {
         cell.accessoryType = UITableViewCellAccessoryNone;
         cell.selectionStyle = UITableViewCellSelectionStyleDefault;
@@ -331,14 +331,14 @@ extern char **environ;
     }
     if ([kind isEqualToString:@"copy"]) {
         [UIPasteboard generalPasteboard].string = row[@"url"];
-        [self toast:@"\u0110\u00e3 sao ch\u00e9p URL"];
+        [self toast:@"已复制URL"];
         return;
     }
     if ([kind isEqualToString:@"info"]) {
         NSString *text = [self firstText:row[@"keys"]];
         if (text.length > 0) {
             [UIPasteboard generalPasteboard].string = text;
-            [self toast:@"\u0110\u00e3 sao ch\u00e9p"];
+            [self toast:@"已复制"];
         }
         return;
     }
@@ -351,7 +351,7 @@ extern char **environ;
     } else if ([action isEqualToString:@"full"]) {
         [self runRandom:YES silent:NO];
     } else if ([action isEqualToString:@"profile"]) {
-        [self showSummaryTitle:@"H\u1ed3 s\u01a1 hi\u1ec7n t\u1ea1i" profile:ChengIOSLoadSavedProfile()];
+        [self showSummaryTitle:@"当前配置" profile:ChengIOSLoadSavedProfile()];
     } else if ([action isEqualToString:@"copy"]) {
         [self copySummary];
     } else if ([action isEqualToString:@"settings"]) {
@@ -383,7 +383,7 @@ extern char **environ;
     if (respring) {
         if (!silent) {
             UIAlertController *alert = [UIAlertController alertControllerWithTitle:title
-                                                                           message:@"Da copy ho so. Dang Respring..."
+                                                                           message:@"已复制配置。正在Respring..."
                                                                     preferredStyle:UIAlertControllerStyleAlert];
             [self presentViewController:alert animated:YES completion:^{
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.9 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -407,7 +407,7 @@ extern char **environ;
 }
 
 - (void)runRandom:(BOOL)full silent:(BOOL)silent respring:(BOOL)respring {
-    NSString *title = full ? @"Random Toan Bo" : @"Random Info May";
+    NSString *title = full ? @"随机生成全部" : @"随机生成设备信息";
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSDictionary *profile = full ? ChengIOSRandomFullProfile() : ChengIOSRandomIdentity();
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -419,11 +419,11 @@ extern char **environ;
 - (void)showSummaryTitle:(NSString *)title profile:(NSDictionary *)profile {
     NSString *text = ChengIOSProfileSummary(profile);
     if (text.length == 0) {
-        text = @"Ch\u01b0a c\u00f3 h\u1ed3 s\u01a1.";
+        text = @"暂无配置。";
     }
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:text preferredStyle:UIAlertControllerStyleAlert];
-    [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
-    [alert addAction:[UIAlertAction actionWithTitle:@"Sao ch\u00e9p" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+    [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"复制" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         (void)action;
         [UIPasteboard generalPasteboard].string = text;
     }]];
@@ -433,11 +433,11 @@ extern char **environ;
 - (void)copySummary {
     NSString *text = ChengIOSProfileSummary(ChengIOSLoadSavedProfile());
     if (text.length == 0) {
-        [self toast:@"Ch\u01b0a c\u00f3 h\u1ed3 s\u01a1"];
+        [self toast:@"暂无配置"];
         return;
     }
     [UIPasteboard generalPasteboard].string = text;
-    [self toast:@"\u0110\u00e3 sao ch\u00e9p h\u1ed3 s\u01a1"];
+    [self toast:@"已复制配置"];
 }
 
 - (void)toast:(NSString *)message {
@@ -550,7 +550,7 @@ extern char **environ;
         NSString *region = [self queryValue:url name:@"region"] ?: [self queryValue:url name:@"iso"];
         if (region.length > 0) {
             NSDictionary *profile = ChengIOSRandomFullProfileInRegion(region);
-            [self finishChangeInfo:profile title:[NSString stringWithFormat:@"Random %@", region.uppercaseString] silent:silent respring:!noRespring];
+            [self finishChangeInfo:profile title:[NSString stringWithFormat:@"随机生成 %@", region.uppercaseString] silent:silent respring:!noRespring];
         } else {
             [self runRandom:YES silent:silent respring:!noRespring];
         }
@@ -562,7 +562,7 @@ extern char **environ;
     } else if ([self token:token hasAny:@[@"copy"]]) {
         [self copySummary]; did = YES;
     } else if ([self token:token hasAny:@[@"profile", @"current", @"hoso", @"ho-so", @"info"]]) {
-        [self showSummaryTitle:@"H\u1ed3 s\u01a1 hi\u1ec7n t\u1ea1i" profile:ChengIOSLoadSavedProfile()]; did = YES;
+        [self showSummaryTitle:@"当前配置" profile:ChengIOSLoadSavedProfile()]; did = YES;
     } else if ([self token:token hasAny:@[@"apps", @"change-apps", @"applist", @"safari"]]) {
         AppListViewController *list = [[AppListViewController alloc] initWithStyle:UITableViewStyleGrouped];
         [self.navigationController pushViewController:list animated:YES];
