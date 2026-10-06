@@ -40,7 +40,7 @@ extern char **environ;
             @{@"kind": @"button", @"title": @"随机生成全部", @"action": @"full"},
             @{@"kind": @"button", @"title": @"查看配置", @"action": @"profile"},
             @{@"kind": @"button", @"title": @"复制配置", @"action": @"copy"},
-            @{@"kind": @"nav", @"title": @"按地区随机生成", @"page": @"region", @"detail": @"越南 / 美国 / 韩国 / 日本..."},
+            @{@"kind": @"nav", @"title": @"按地区随机生成", @"page": @"region", @"detail": @"越南 / 美国 / 韩国 / 日本"},
             @{@"kind": @"nav", @"title": @"深度链接 / 快捷指令", @"page": @"deeplink", @"detail": @"chengios://"}
         ],
         @[
@@ -54,11 +54,11 @@ extern char **environ;
         ],
         @[
             @{@"kind": @"switch", @"title": @"启用ChengIOS", @"key": @"masterEnabled", @"defaultOn": @YES},
-            @{@"kind": @"switch", @"title": @"深度伪装（Gestalt / Darwin）", @"key": @"gestaltEnabled", @"defaultOn": @NO, @"detail": @"Facebook/Shopee跳过Gestalt；普通应用才使用Darwin。需强制关闭目标应用"},
-            @{@"kind": @"switch", @"title": @"隐藏越狱 / 绕过检测", @"key": @"hideJailbreakEnabled", @"defaultOn": @NO, @"detail": @"隐藏Cydia/Sileo/ElleKit。Shopee不注入插件。Facebook仅隐藏文件/URL。需强制关闭"}
+            @{@"kind": @"switch", @"title": @"深度伪装", @"key": @"gestaltEnabled", @"defaultOn": @NO, @"detail": @"Facebook/Shopee跳过Gestalt"},
+            @{@"kind": @"switch", @"title": @"隐藏越狱", @"key": @"hideJailbreakEnabled", @"defaultOn": @NO, @"detail": @"隐藏Cydia/Sileo/ElleKit"}
         ],
         @[
-            @{@"kind": @"nav", @"title": @"选择应用", @"detail": @"Shopee仅清除数据。其他应用勾选后需Respring"}
+            @{@"kind": @"nav", @"title": @"选择应用", @"detail": @"Shopee仅清除数据"}
         ],
         @[
             @{@"kind": @"text", @"title": @"型号", @"keys": @[@"spoofedModel", @"customDeviceModel"], @"placeholder": @"iPhone16,2"},
@@ -66,7 +66,7 @@ extern char **environ;
             @{@"kind": @"text", @"title": @"iOS", @"keys": @[@"spoofedSystemVersion", @"customOSVersion"], @"placeholder": @"18.6.1"},
             @{@"kind": @"text", @"title": @"版本号", @"keys": @[@"spoofedBuild", @"customBuildNumber"], @"placeholder": @"22G100"},
             @{@"kind": @"text", @"title": @"主机名", @"keys": @[@"spoofedHostname", @"customHostName"], @"placeholder": @"iPhone.local"},
-            @{@"kind": @"info", @"title": @"User-Agent", @"keys": @[@"spoofedUserAgent"]},
+            @{@"kind": @"info", @"title": @"User-Agent", @"keys": @[@"spoofedUserAgent"]}
         ],
         @[
             @{@"kind": @"switch", @"title": @"使用自定义iOS版本", @"key": @"useCustomOSVersion", @"defaultOn": @NO},
@@ -122,9 +122,9 @@ extern char **environ;
             @{@"kind": @"text", @"title": @"蓝牙 MAC", @"keys": @[@"bluetoothAddress"], @"placeholder": @"02:00:00:00:00:02"}
         ],
         @[
-            @{@"kind": @"button", @"title": @"打开ChengIOS设置", @"action": @"settings"},
+            @{@"kind": @"button", @"title": @"打开ChengIOS设置", @"action": @"settings"}
         ]
-    ];
+    };
 }
 
 - (void)viewDidLoad {
