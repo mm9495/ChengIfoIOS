@@ -8,9 +8,9 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Hồ sơ hiện tại</string>
+			<string>当前配置</string>
 			<key>footerText</key>
-			<string>Giá trị đang lưu sau Random hoặc nhập tay. Bấm Sao chép để copy toàn bộ.</string>
+			<string>随机生成或手动输入后保存的值。点击复制以复制全部信息。</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -18,7 +18,7 @@
 			<key>action</key>
 			<string>showCurrentInfo</string>
 			<key>label</key>
-			<string>Xem tóm tắt</string>
+			<string>查看摘要</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -26,7 +26,7 @@
 			<key>action</key>
 			<string>copyCurrentInfo</string>
 			<key>label</key>
-			<string>Sao chép hồ sơ</string>
+			<string>复制配置</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -34,15 +34,15 @@
 			<key>action</key>
 			<string>randomizeAll</string>
 			<key>label</key>
-			<string>Random Toàn Bộ</string>
+			<string>随机生成全部</string>
 		</dict>
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Máy</string>
+			<string>设备</string>
 			<key>footerText</key>
-			<string>Model, tên, hostname, iOS và build phải khớp nhau nếu đã Random.</string>
+			<string>如果已随机生成，型号、名称、主机名、iOS 和版本号必须相互匹配。</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -50,7 +50,7 @@
 			<key>defaults</key>
 			<string>com.vinhnv2507.chengiosprefs</string>
 			<key>label</key>
-			<string>Máy</string>
+			<string>设备</string>
 			<key>keys</key>
 			<array>
 				<string>profileProduct</string>
@@ -64,7 +64,7 @@
 			<key>defaults</key>
 			<string>com.vinhnv2507.chengiosprefs</string>
 			<key>label</key>
-			<string>Model</string>
+			<string>型号</string>
 			<key>keys</key>
 			<array>
 				<string>spoofedModel</string>
@@ -79,7 +79,7 @@
 			<key>defaults</key>
 			<string>com.vinhnv2507.chengiosprefs</string>
 			<key>label</key>
-			<string>Tên</string>
+			<string>名称</string>
 			<key>keys</key>
 			<array>
 				<string>spoofedName</string>
@@ -94,7 +94,7 @@
 			<key>defaults</key>
 			<string>com.vinhnv2507.chengiosprefs</string>
 			<key>label</key>
-			<string>Hostname</string>
+			<string>主机名</string>
 			<key>keys</key>
 			<array>
 				<string>spoofedHostname</string>
@@ -124,7 +124,7 @@
 			<key>defaults</key>
 			<string>com.vinhnv2507.chengiosprefs</string>
 			<key>label</key>
-			<string>Build</string>
+			<string>版本号</string>
 			<key>keys</key>
 			<array>
 				<string>spoofedBuild</string>
@@ -153,7 +153,7 @@
 			<key>label</key>
 			<string>Gestalt / ID</string>
 			<key>footerText</key>
-			<string>Serial, UDID, IDFV giữ nguyên đến lần Random tiếp theo. Không đổi màn hình.</string>
+			<string>序列号、UDID、IDFV 保持到下次随机生成。不改变屏幕参数。</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -161,7 +161,7 @@
 			<key>defaults</key>
 			<string>com.vinhnv2507.chengiosprefs</string>
 			<key>label</key>
-			<string>Board</string>
+			<string>主板</string>
 			<key>key</key>
 			<string>hwModelStr</string>
 		</dict>
@@ -171,7 +171,7 @@
 			<key>defaults</key>
 			<string>com.vinhnv2507.chengiosprefs</string>
 			<key>label</key>
-			<string>Chip</string>
+			<string>芯片</string>
 			<key>key</key>
 			<string>hardwarePlatform</string>
 		</dict>
@@ -181,7 +181,7 @@
 			<key>defaults</key>
 			<string>com.vinhnv2507.chengiosprefs</string>
 			<key>label</key>
-			<string>RAM (GB)</string>
+			<string>内存 (GB)</string>
 			<key>key</key>
 			<string>memoryGB</string>
 		</dict>
@@ -191,7 +191,7 @@
 			<key>defaults</key>
 			<string>com.vinhnv2507.chengiosprefs</string>
 			<key>label</key>
-			<string>Serial</string>
+			<string>序列号</string>
 			<key>key</key>
 			<string>spoofedSerialNumber</string>
 		</dict>
@@ -229,7 +229,7 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>App</string>
+			<string>应用</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -237,7 +237,7 @@
 			<key>defaults</key>
 			<string>com.vinhnv2507.chengiosprefs</string>
 			<key>label</key>
-			<string>App Version</string>
+			<string>应用版本</string>
 			<key>keys</key>
 			<array>
 				<string>customAppVersion</string>
@@ -249,7 +249,7 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Locale / nhà mạng</string>
+			<string>区域设置 / 运营商</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -257,7 +257,7 @@
 			<key>defaults</key>
 			<string>com.vinhnv2507.chengiosprefs</string>
 			<key>label</key>
-			<string>Locale</string>
+			<string>区域</string>
 			<key>keys</key>
 			<array>
 				<string>localeIdentifier</string>
@@ -271,7 +271,7 @@
 			<key>defaults</key>
 			<string>com.vinhnv2507.chengiosprefs</string>
 			<key>label</key>
-			<string>Time Zone</string>
+			<string>时区</string>
 			<key>keys</key>
 			<array>
 				<string>timeZoneName</string>
@@ -285,7 +285,7 @@
 			<key>defaults</key>
 			<string>com.vinhnv2507.chengiosprefs</string>
 			<key>label</key>
-			<string>Nhà mạng</string>
+			<string>运营商</string>
 			<key>keys</key>
 			<array>
 				<string>carrierName</string>
@@ -347,7 +347,7 @@
 			<key>defaults</key>
 			<string>com.vinhnv2507.chengiosprefs</string>
 			<key>label</key>
-			<string>Thành phố</string>
+			<string>城市</string>
 			<key>keys</key>
 			<array>
 				<string>profileCity</string>
@@ -361,7 +361,7 @@
 			<key>defaults</key>
 			<string>com.vinhnv2507.chengiosprefs</string>
 			<key>label</key>
-			<string>Latitude</string>
+			<string>纬度</string>
 			<key>keys</key>
 			<array>
 				<string>latitude</string>
@@ -375,7 +375,7 @@
 			<key>defaults</key>
 			<string>com.vinhnv2507.chengiosprefs</string>
 			<key>label</key>
-			<string>Longitude</string>
+			<string>经度</string>
 			<key>keys</key>
 			<array>
 				<string>longitude</string>
@@ -389,7 +389,7 @@
 			<key>defaults</key>
 			<string>com.vinhnv2507.chengiosprefs</string>
 			<key>label</key>
-			<string>Altitude</string>
+			<string>海拔</string>
 			<key>keys</key>
 			<array>
 				<string>altitude</string>
@@ -403,7 +403,7 @@
 			<key>defaults</key>
 			<string>com.vinhnv2507.chengiosprefs</string>
 			<key>label</key>
-			<string>Accuracy</string>
+			<string>精度</string>
 			<key>keys</key>
 			<array>
 				<string>accuracy</string>
@@ -415,9 +415,9 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Mạng / Wi-Fi</string>
+			<string>网络 / Wi-Fi</string>
 			<key>footerText</key>
-			<string>SSID/BSSID là Wi-Fi đang giả lập. MAC là địa chỉ máy (Private Wi-Fi). Gateway khớp subnet IPv4.</string>
+			<string>SSID/BSSID 是正在模拟的 Wi-Fi。MAC 是设备地址（私有 Wi-Fi）。网关匹配 IPv4 子网。</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -425,7 +425,7 @@
 			<key>defaults</key>
 			<string>com.vinhnv2507.chengiosprefs</string>
 			<key>label</key>
-			<string>Interface</string>
+			<string>接口</string>
 			<key>keys</key>
 			<array>
 				<string>interfaceName</string>
@@ -509,7 +509,7 @@
 			<key>defaults</key>
 			<string>com.vinhnv2507.chengiosprefs</string>
 			<key>label</key>
-			<string>Gateway</string>
+			<string>网关</string>
 			<key>keys</key>
 			<array>
 				<string>wifiGateway</string>
@@ -533,6 +533,5 @@
 		</dict>
 	</array>
 	<key>title</key>
-	<string>Hồ sơ hiện tại</string>
+	<string>当前配置</string>
 </dict>
-</plist>
