@@ -6,7 +6,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"Random theo vung";
+    self.title = @"按地区随机生成";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -16,7 +16,7 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
     (void)tableView; (void)section;
-    return @"Mac dinh theo IP public. Chon vung de ep tay locale/nha mang/GPS/Wi-Fi. Web van thay IP that (can VPN neu muon US/KR).";
+    return @"默认根据公网IP。选择地区可手动设置区域设置/运营商/GPS/Wi-Fi。网页仍显示真实IP（如需美国/韩国请使用VPN）。";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -28,7 +28,7 @@
     NSDictionary *item = ChengIOSRegionChoices()[indexPath.row];
     cell.textLabel.text = item[@"title"];
     NSString *iso = item[@"iso"];
-    cell.detailTextLabel.text = iso.length ? iso.uppercaseString : @"auto";
+    cell.detailTextLabel.text = iso.length ? iso.uppercaseString : @"自动";
     return cell;
 }
 
@@ -36,7 +36,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSDictionary *item = ChengIOSRegionChoices()[indexPath.row];
     NSString *iso = item[@"iso"];
-    NSString *title = item[@"title"] ?: @"Random";
+    NSString *title = item[@"title"] ?: @"随机生成";
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSDictionary *profile = iso.length ? ChengIOSRandomFullProfileInRegion(iso) : ChengIOSRandomFullProfile();
         NSString *text = ChengIOSProfileSummary(profile);
@@ -46,7 +46,7 @@
                 [UIPasteboard generalPasteboard].string = text;
             }
             UIAlertController *alert = [UIAlertController alertControllerWithTitle:title
-                                                                           message:@"Da copy ho so. Dang Respring..."
+                                                                           message:@"已复制配置。正在Respring..."
                                                                     preferredStyle:UIAlertControllerStyleAlert];
             [self presentViewController:alert animated:YES completion:^{
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.9 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
