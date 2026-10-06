@@ -8,9 +8,9 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Random</string>
+			<string>随机生成</string>
 			<key>footerText</key>
-			<string>Random chọn 1 hồ sơ máy thật: model, tên, hostname, iOS và build khớp nhau. Toàn bộ còn điền locale/nhà mạng/GPS/mạng/app theo đúng vùng đó.</string>
+			<string>随机选择一个真实设备配置：型号、名称、主机名、iOS 版本和构建版本相互匹配。完整模式还会根据该地区填写语言环境、运营商、GPS、网络和 App 版本。</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -18,7 +18,7 @@
 			<key>action</key>
 			<string>randomizeIdentity</string>
 			<key>label</key>
-			<string>Random Info Máy</string>
+			<string>随机设备信息</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -26,7 +26,7 @@
 			<key>action</key>
 			<string>randomizeAll</string>
 			<key>label</key>
-			<string>Random Toàn Bộ</string>
+			<string>随机全部信息</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -34,7 +34,7 @@
 			<key>action</key>
 			<string>showCurrentInfo</string>
 			<key>label</key>
-			<string>Xem Info Hiện Tại</string>
+			<string>查看当前信息</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -44,15 +44,15 @@
 			<key>isController</key>
 			<true/>
 			<key>label</key>
-			<string>Hồ sơ hiện tại</string>
+			<string>当前配置</string>
 		</dict>
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Change Info</string>
+			<string>修改信息</string>
 			<key>footerText</key>
-			<string>Các khóa này tương thích ChengIOS 1.0.1. Nếu điền phiên bản iOS, tweak sẽ dùng đúng giá trị đó.</string>
+			<string>这些键值与 ChengIOS 1.0.1 兼容。如果填写 iOS 版本，插件将使用确切的值。</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -62,7 +62,7 @@
 			<key>key</key>
 			<string>spoofedModel</string>
 			<key>label</key>
-			<string>Model</string>
+			<string>型号</string>
 			<key>placeholder</key>
 			<string>iPhone16,2</string>
 			<key>PostNotification</key>
@@ -76,7 +76,7 @@
 			<key>key</key>
 			<string>spoofedName</string>
 			<key>label</key>
-			<string>Device Name</string>
+			<string>设备名称</string>
 			<key>placeholder</key>
 			<string>iPhone</string>
 			<key>PostNotification</key>
@@ -90,7 +90,7 @@
 			<key>key</key>
 			<string>spoofedSystemVersion</string>
 			<key>label</key>
-			<string>iOS Version</string>
+			<string>iOS 版本</string>
 			<key>placeholder</key>
 			<string>18.6.1</string>
 			<key>PostNotification</key>
@@ -104,7 +104,7 @@
 			<key>key</key>
 			<string>spoofedBuild</string>
 			<key>label</key>
-			<string>iOS Build</string>
+			<string>iOS 构建版本</string>
 			<key>placeholder</key>
 			<string>22G100</string>
 			<key>PostNotification</key>
@@ -118,7 +118,7 @@
 			<key>key</key>
 			<string>spoofedHostname</string>
 			<key>label</key>
-			<string>Hostname</string>
+			<string>主机名</string>
 			<key>placeholder</key>
 			<string>iPhone.local</string>
 			<key>PostNotification</key>
@@ -126,6 +126,6 @@
 		</dict>
 	</array>
 	<key>title</key>
-	<string>Change Info</string>
+	<string>修改信息</string>
 </dict>
 </plist>
