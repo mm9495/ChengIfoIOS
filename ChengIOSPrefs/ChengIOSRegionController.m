@@ -21,15 +21,15 @@
     });
 }
 
-- (void)randomizeRegionAuto { [self randomizeISO:nil title:@"Random theo IP"]; }
-- (void)randomizeRegionVN { [self randomizeISO:@"vn" title:@"Random Viet Nam"]; }
-- (void)randomizeRegionUS { [self randomizeISO:@"us" title:@"Random United States"]; }
-- (void)randomizeRegionKR { [self randomizeISO:@"kr" title:@"Random Korea"]; }
-- (void)randomizeRegionJP { [self randomizeISO:@"jp" title:@"Random Japan"]; }
-- (void)randomizeRegionGB { [self randomizeISO:@"gb" title:@"Random United Kingdom"]; }
-- (void)randomizeRegionTH { [self randomizeISO:@"th" title:@"Random Thailand"]; }
-- (void)randomizeRegionSG { [self randomizeISO:@"sg" title:@"Random Singapore"]; }
-- (void)randomizeRegionAU { [self randomizeISO:@"au" title:@"Random Australia"]; }
-- (void)randomizeRegionTW { [self randomizeISO:@"tw" title:@"Random Taiwan"]; }
+- (void)randomizeRegionAuto { [self randomizeISO:nil title:@"根据 IP 随机生成"]; }
+- (void)randomizeRegionVN { [self randomizeISO:@"vn" title:@"随机生成越南环境"]; }
+- (void)randomizeRegionUS { [self randomizeISO:@"us" title:@"随机生成美国环境"]; }
+- (void)randomizeRegionKR { [self randomizeISO:@"kr" title:@"随机生成韩国环境"]; }
+- (void)randomizeRegionJP { [self randomizeISO:@"jp" title:@"随机生成日本环境"]; }
+- (void)randomizeRegionGB { [self randomizeISO:@"gb" title:@"随机生成英国环境"]; }
+- (void)randomizeRegionTH { [self randomizeISO:@"th" title:@"随机生成泰国环境"]; }
+- (void)randomizeRegionSG { [self randomizeISO:@"sg" title:@"随机生成新加坡环境"]; }
+- (void)randomizeRegionAU { [self randomizeISO:@"au" title:@"随机生成澳大利亚环境"]; }
+- (void)randomizeRegionTW { [self randomizeISO:@"tw" title:@"随机生成台湾环境"]; }
 
 @end
