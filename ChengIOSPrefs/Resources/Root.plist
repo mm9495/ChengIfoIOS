@@ -8,9 +8,9 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Refresh / Respring</string>
+			<string>刷新 / 重启 SpringBoard</string>
 			<key>footerText</key>
-			<string>Refresh nap lai prefs. Respring de moi app nhan ChengIOS. Hai nut nam dau trang va tren app (trai Respring, phai Refresh).</string>
+			<string>刷新重新加载设置。重启 SpringBoard 使所有 App 生效 ChengIOS。两个按钮在页面顶部和 App 中（左重启，右刷新）。</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -18,7 +18,7 @@
 			<key>action</key>
 			<string>refreshPrefs</string>
 			<key>label</key>
-			<string>Refresh</string>
+			<string>刷新</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -26,15 +26,15 @@
 			<key>action</key>
 			<string>respring</string>
 			<key>label</key>
-			<string>Respring</string>
+			<string>重启 SpringBoard</string>
 		</dict>
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Random Info</string>
+			<string>随机生成信息</string>
 			<key>footerText</key>
-			<string>Mac dinh theo IP public: quoc gia, nha mang, GPS, locale, Wi-Fi. Web van thay IP that (can VPN neu muon US/KR). Random theo vung de ep tay. Sau Random se Respring tu dong.</string>
+			<string>默认根据公网 IP：国家、运营商、GPS、语言、Wi-Fi。网页仍能看到真实 IP（如需美国/韩国 IP 请使用 VPN）。按地区随机可手动强制设置。随机后会自动重启。</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -42,7 +42,7 @@
 			<key>action</key>
 			<string>randomizeIdentity</string>
 			<key>label</key>
-			<string>Random Info Máy</string>
+			<string>随机设备信息</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -50,7 +50,7 @@
 			<key>action</key>
 			<string>randomizeAll</string>
 			<key>label</key>
-			<string>Random Toàn Bộ</string>
+			<string>随机全部信息</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -60,7 +60,7 @@
 			<key>isController</key>
 			<true/>
 			<key>label</key>
-			<string>Random theo vung</string>
+			<string>按地区随机</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -70,15 +70,15 @@
 			<key>isController</key>
 			<true/>
 			<key>label</key>
-			<string>Deeplink / Shortcuts</string>
+			<string>深度链接 / 快捷指令</string>
 		</dict>
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Backup / Data app</string>
+			<string>备份 / App 数据</string>
 			<key>footerText</key>
-			<string>Backup ho so ChengIOS (nho). Backup data app luu Documents/Library/Caches/tmp/SystemData + keychain; Facebook/TikTok tu gom companion da cai. Xoa data: kill app roi xoa sandbox. Khong xoa Safari/keychain iCloud. Nen dung app ChengIOS.</string>
+			<string>备份 ChengIOS 配置（小）。备份 App 数据保存 Documents/Library/Caches/tmp/SystemData + Keychain；Facebook/TikTok 会自动收集已安装的配套 App。清除数据：杀掉 App 进程后清除沙盒。不清除 Safari/iCloud Keychain。建议使用 ChengIOS App 操作。</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -88,7 +88,7 @@
 			<key>isController</key>
 			<true/>
 			<key>label</key>
-			<string>Quan ly Backup</string>
+			<string>备份管理</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -96,7 +96,7 @@
 			<key>action</key>
 			<string>showCurrentInfo</string>
 			<key>label</key>
-			<string>Xem Info Hiện Tại</string>
+			<string>查看当前信息</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -106,15 +106,15 @@
 			<key>isController</key>
 			<true/>
 			<key>label</key>
-			<string>Hồ sơ hiện tại</string>
+			<string>当前配置</string>
 		</dict>
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Chung</string>
+			<string>通用</string>
 			<key>footerText</key>
-			<string>Chỉ app được chọn mới bị giả lập. App không nằm trong Change Apps hoặc Spoofed Apps sẽ không bị sửa.</string>
+			<string>只有选中的 App 会被伪装。不在"修改 Apps"或"伪装 Apps"中的 App 不会被修改。</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -128,7 +128,7 @@
 			<key>key</key>
 			<string>masterEnabled</string>
 			<key>label</key>
-			<string>Bật ChengIOS</string>
+			<string>启用 ChengIOS</string>
 			<key>PostNotification</key>
 			<string>com.vinhnv2507.chengiosprefs/changed</string>
 		</dict>
@@ -144,7 +144,7 @@
 			<key>key</key>
 			<string>gestaltEnabled</string>
 			<key>label</key>
-			<string>Spoof sâu (Gestalt / Darwin)</string>
+			<string>深度伪装（Gestalt / Darwin）</string>
 			<key>PostNotification</key>
 			<string>com.vinhnv2507.chengiosprefs/changed</string>
 		</dict>
@@ -160,7 +160,7 @@
 			<key>key</key>
 			<string>hideJailbreakEnabled</string>
 			<key>label</key>
-			<string>Ẩn jailbreak / bypass</string>
+			<string>隐藏越狱 / 绕过检测</string>
 			<key>PostNotification</key>
 			<string>com.vinhnv2507.chengiosprefs/changed</string>
 		</dict>
@@ -168,7 +168,7 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>footerText</key>
-			<string>Spoof sâu: Gestalt/Darwin/RAM trên app thường. Facebook bỏ qua Gestalt (tránh văng) nhưng vẫn đổi model. Shopee không inject tweak (tránh captcha), chỉ xóa data + IDFV thật. Safari chỉ đổi User-Agent; vuốt tắt hẳn Safari. Ẩn jailbreak: chỉ app đã chọn. Respring sau khi đổi Change Apps.</string>
+			<string>深度伪装：Gestalt/Darwin/RAM 在普通 App 上生效。Facebook 跳过 Gestalt（避免崩溃）但仍修改型号。Shopee 不注入 tweak（避免验证码），只清除数据 + 真实 IDFV。Safari 只修改 User-Agent；完全关闭 Safari。隐藏越狱：仅选中的 App。修改"修改 Apps"后请重启。</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -178,7 +178,7 @@
 			<key>isController</key>
 			<true/>
 			<key>label</key>
-			<string>Change Apps</string>
+			<string>修改 Apps</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -192,26 +192,26 @@
 			<key>key</key>
 			<string>spoofedApps</string>
 			<key>label</key>
-			<string>Spoofed Apps</string>
+			<string>伪装 Apps</string>
 			<key>PostNotification</key>
 			<string>com.vinhnv2507.chengiosprefs/changed</string>
 			<key>sections</key>
 			<array>
 				<dict>
 					<key>sectionName</key>
-					<string>User Apps</string>
+					<string>用户 App</string>
 					<key>sectionType</key>
 					<string>User</string>
 				</dict>
 				<dict>
 					<key>sectionName</key>
-					<string>System Apps (không khuyến nghị)</string>
+					<string>系统 App（不推荐）</string>
 					<key>sectionType</key>
 					<string>System</string>
 				</dict>
 				<dict>
 					<key>sectionName</key>
-					<string>Hidden Apps (không khuyến nghị)</string>
+					<string>隐藏 App（不推荐）</string>
 					<key>sectionType</key>
 					<string>Hidden</string>
 				</dict>
@@ -229,15 +229,15 @@
 			<key>isController</key>
 			<true/>
 			<key>label</key>
-			<string>Change Info</string>
+			<string>修改信息</string>
 		</dict>
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Phiên bản iOS</string>
+			<string>iOS 版本</string>
 			<key>footerText</key>
-			<string>Nếu bật tùy chỉnh hoặc đã điền Change Info, ChengIOS dùng đúng chuỗi bạn nhập (ví dụ 18.6.1). Nếu trống, tweak ước lượng phiên bản iOS hiện tại theo ngày.</string>
+			<string>如果启用自定义或已填写"修改信息"，ChengIOS 将使用您输入的确切字符串（例如 18.6.1）。如果留空，tweak 将根据日期估算当前 iOS 版本。</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -251,7 +251,7 @@
 			<key>key</key>
 			<string>useCustomOSVersion</string>
 			<key>label</key>
-			<string>Dùng phiên bản iOS tùy chỉnh</string>
+			<string>使用自定义 iOS 版本</string>
 			<key>PostNotification</key>
 			<string>com.vinhnv2507.chengiosprefs/changed</string>
 		</dict>
@@ -263,7 +263,7 @@
 			<key>key</key>
 			<string>customOSVersion</string>
 			<key>label</key>
-			<string>Custom Version</string>
+			<string>自定义版本</string>
 			<key>PostNotification</key>
 			<string>com.vinhnv2507.chengiosprefs/changed</string>
 			<key>placeholder</key>
@@ -277,7 +277,7 @@
 			<key>key</key>
 			<string>customBuildNumber</string>
 			<key>label</key>
-			<string>Custom Build</string>
+			<string>自定义构建版本</string>
 			<key>PostNotification</key>
 			<string>com.vinhnv2507.chengiosprefs/changed</string>
 			<key>placeholder</key>
@@ -287,9 +287,9 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Phiên bản App</string>
+			<string>App 版本</string>
 			<key>footerText</key>
-			<string>Mặc định tắt. Đừng bật cho Facebook/Shopee — app sẽ văng vì lệch Info.plist.</string>
+			<string>默认关闭。不要为 Facebook/Shopee 开启 — App 会因 Info.plist 不匹配而崩溃。</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -303,7 +303,7 @@
 			<key>key</key>
 			<string>appVersionEnabled</string>
 			<key>label</key>
-			<string>Giả lập phiên bản App</string>
+			<string>模拟 App 版本</string>
 			<key>PostNotification</key>
 			<string>com.vinhnv2507.chengiosprefs/changed</string>
 		</dict>
@@ -315,7 +315,7 @@
 			<key>key</key>
 			<string>customAppVersion</string>
 			<key>label</key>
-			<string>App Version</string>
+			<string>App 版本</string>
 			<key>PostNotification</key>
 			<string>com.vinhnv2507.chengiosprefs/changed</string>
 			<key>placeholder</key>
@@ -327,9 +327,9 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Định danh thiết bị</string>
+			<string>设备标识</string>
 			<key>footerText</key>
-			<string>Tắt mặc định. Tên/hostname/model trong Change Info vẫn có hiệu lực nếu đã điền. Vendor ID và advertising ID chỉ random khi bật công tắc này.</string>
+			<string>默认关闭。"修改信息"中的名称/主机名/型号如果已填写仍然有效。供应商 ID 和广告 ID 仅在开启此开关时随机生成。</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -343,7 +343,7 @@
 			<key>key</key>
 			<string>deviceIdentityEnabled</string>
 			<key>label</key>
-			<string>Giả lập tên, hostname và ID</string>
+			<string>模拟名称、主机名和 ID</string>
 			<key>PostNotification</key>
 			<string>com.vinhnv2507.chengiosprefs/changed</string>
 		</dict>
@@ -355,7 +355,7 @@
 			<key>key</key>
 			<string>customDeviceName</string>
 			<key>label</key>
-			<string>Tên thiết bị</string>
+			<string>设备名称</string>
 			<key>PostNotification</key>
 			<string>com.vinhnv2507.chengiosprefs/changed</string>
 			<key>placeholder</key>
@@ -369,7 +369,7 @@
 			<key>key</key>
 			<string>customHostName</string>
 			<key>label</key>
-			<string>Hostname</string>
+			<string>主机名</string>
 			<key>PostNotification</key>
 			<string>com.vinhnv2507.chengiosprefs/changed</string>
 			<key>placeholder</key>
@@ -383,7 +383,7 @@
 			<key>key</key>
 			<string>customDeviceModel</string>
 			<key>label</key>
-			<string>Model</string>
+			<string>型号</string>
 			<key>PostNotification</key>
 			<string>com.vinhnv2507.chengiosprefs/changed</string>
 			<key>placeholder</key>
@@ -393,9 +393,9 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Ngôn ngữ và nhà mạng</string>
+			<string>语言和运营商</string>
 			<key>footerText</key>
-			<string>Tắt mặc định. Chỉ bật khi app đọc locale, múi giờ hoặc nhà mạng.</string>
+			<string>默认关闭。仅在 App 读取语言环境、时区或运营商时开启。</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -409,7 +409,7 @@
 			<key>key</key>
 			<string>localeEnabled</string>
 			<key>label</key>
-			<string>Giả lập locale và múi giờ</string>
+			<string>模拟语言和时区</string>
 			<key>PostNotification</key>
 			<string>com.vinhnv2507.chengiosprefs/changed</string>
 		</dict>
@@ -437,7 +437,7 @@
 			<key>key</key>
 			<string>timeZoneName</string>
 			<key>label</key>
-			<string>Time Zone</string>
+			<string>时区</string>
 			<key>PostNotification</key>
 			<string>com.vinhnv2507.chengiosprefs/changed</string>
 			<key>placeholder</key>
@@ -457,7 +457,7 @@
 			<key>key</key>
 			<string>carrierEnabled</string>
 			<key>label</key>
-			<string>Giả lập nhà mạng</string>
+			<string>模拟运营商</string>
 			<key>PostNotification</key>
 			<string>com.vinhnv2507.chengiosprefs/changed</string>
 		</dict>
@@ -469,7 +469,7 @@
 			<key>key</key>
 			<string>carrierName</string>
 			<key>label</key>
-			<string>Carrier Name</string>
+			<string>运营商名称</string>
 			<key>PostNotification</key>
 			<string>com.vinhnv2507.chengiosprefs/changed</string>
 			<key>placeholder</key>
@@ -521,7 +521,7 @@
 			<key>key</key>
 			<string>isoCountryCode</string>
 			<key>label</key>
-			<string>ISO Country</string>
+			<string>ISO 国家代码</string>
 			<key>PostNotification</key>
 			<string>com.vinhnv2507.chengiosprefs/changed</string>
 			<key>placeholder</key>
@@ -533,9 +533,9 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Vị trí</string>
+			<string>位置</string>
 			<key>footerText</key>
-			<string>Tat mac dinh. Can bat va dien lat/long. Safari: vuot tat han, mo tab moi, bam Detect. Region/City/ISP tren deviceinfo.me la IP cong cong that (Viettel/Hung Yen) - can VPN neu muon IP US/KR. Tweak khong doi IP public.</string>
+			<string>默认关闭。需要开启并填写纬度/经度。Safari：完全关闭，打开新标签页，点击 Detect。deviceinfo.me 上的 Region/City/ISP 是真实公网 IP（Viettel/Hung Yen）— 如需美国/韩国 IP 请使用 VPN。Tweak 不会修改公网 IP。</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -549,7 +549,7 @@
 			<key>key</key>
 			<string>locationEnabled</string>
 			<key>label</key>
-			<string>Giả lập vị trí</string>
+			<string>模拟位置</string>
 			<key>PostNotification</key>
 			<string>com.vinhnv2507.chengiosprefs/changed</string>
 		</dict>
@@ -561,7 +561,7 @@
 			<key>key</key>
 			<string>latitude</string>
 			<key>label</key>
-			<string>Latitude</string>
+			<string>纬度</string>
 			<key>PostNotification</key>
 			<string>com.vinhnv2507.chengiosprefs/changed</string>
 			<key>placeholder</key>
@@ -577,7 +577,7 @@
 			<key>key</key>
 			<string>longitude</string>
 			<key>label</key>
-			<string>Longitude</string>
+			<string>经度</string>
 			<key>PostNotification</key>
 			<string>com.vinhnv2507.chengiosprefs/changed</string>
 			<key>placeholder</key>
@@ -593,7 +593,7 @@
 			<key>key</key>
 			<string>altitude</string>
 			<key>label</key>
-			<string>Altitude</string>
+			<string>海拔</string>
 			<key>PostNotification</key>
 			<string>com.vinhnv2507.chengiosprefs/changed</string>
 			<key>placeholder</key>
@@ -611,7 +611,7 @@
 			<key>key</key>
 			<string>accuracy</string>
 			<key>label</key>
-			<string>Accuracy (m)</string>
+			<string>精度（米）</string>
 			<key>PostNotification</key>
 			<string>com.vinhnv2507.chengiosprefs/changed</string>
 			<key>placeholder</key>
@@ -629,7 +629,7 @@
 			<key>key</key>
 			<string>gpxPath</string>
 			<key>label</key>
-			<string>GPX Path</string>
+			<string>GPX 路径</string>
 			<key>PostNotification</key>
 			<string>com.vinhnv2507.chengiosprefs/changed</string>
 			<key>placeholder</key>
@@ -639,9 +639,9 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Mạng / Wi-Fi</string>
+			<string>网络 / Wi-Fi</string>
 			<key>footerText</key>
-			<string>Tắt mặc định. Bật để giả lập IPv4/IPv6/MAC và Wi-Fi SSID/BSSID/gateway. SSID/BSSID qua CaptiveNetwork; MAC vẫn là best-effort.</string>
+			<string>默认关闭。开启以模拟 IPv4/IPv6/MAC 和 Wi-Fi SSID/BSSID/网关。SSID/BSSID 通过 CaptiveNetwork；MAC 仍为尽力而为。</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -655,7 +655,7 @@
 			<key>key</key>
 			<string>networkEnabled</string>
 			<key>label</key>
-			<string>Giả lập định danh mạng</string>
+			<string>模拟网络标识</string>
 			<key>PostNotification</key>
 			<string>com.vinhnv2507.chengiosprefs/changed</string>
 		</dict>
@@ -667,11 +667,11 @@
 			<key>key</key>
 			<string>interfaceName</string>
 			<key>label</key>
-			<string>Interface</string>
+			<string>接口</string>
 			<key>PostNotification</key>
 			<string>com.vinhnv2507.chengiosprefs/changed</string>
 			<key>placeholder</key>
-			<string>en0 hoặc *</string>
+			<string>en0 或 *</string>
 			<key>default</key>
 			<string>en0</string>
 		</dict>
@@ -711,7 +711,7 @@
 			<key>key</key>
 			<string>macAddress</string>
 			<key>label</key>
-			<string>MAC Address</string>
+			<string>MAC 地址</string>
 			<key>PostNotification</key>
 			<string>com.vinhnv2507.chengiosprefs/changed</string>
 			<key>placeholder</key>
@@ -753,7 +753,7 @@
 			<key>key</key>
 			<string>wifiGateway</string>
 			<key>label</key>
-			<string>Gateway</string>
+			<string>网关</string>
 			<key>placeholder</key>
 			<string>192.168.1.1</string>
 			<key>PostNotification</key>
@@ -767,7 +767,7 @@
 			<key>key</key>
 			<string>wifiRSSI</string>
 			<key>label</key>
-			<string>RSSI (dBm)</string>
+			<string>RSSI（dBm）</string>
 			<key>placeholder</key>
 			<string>-52</string>
 			<key>PostNotification</key>
@@ -777,14 +777,15 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>footerText</key>
-			<string>Force-quit app đích sau khi đổi cài đặt. Respring nếu process vẫn báo giá trị cũ.</string>
+			<string>修改设置后强制关闭目标 App。如果进程仍显示旧值，请重启 SpringBoard。</string>
 		</dict>
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>footerText</key>
-			<string>ChengIOS 1.2.53
-by vinhnv2507</string>
+			<string>ChengIOS 1.2.53 中文版
+by vinhnv2507
+汉化：你的用户名</string>
 			<key>isStaticText</key>
 			<true/>
 		</dict>
