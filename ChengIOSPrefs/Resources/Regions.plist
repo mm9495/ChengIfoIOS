@@ -8,9 +8,9 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Random theo vung</string>
+			<string>按地区随机生成</string>
 			<key>footerText</key>
-			<string>Chon vung de dien locale, nha mang, GPS, Wi-Fi, IPv6/LAN cho khop. Website van nhin thay IP cong cong that (Viettel/Hung Yen) neu khong dung VPN.</string>
+			<string>选择地区以填充区域设置、运营商、GPS、Wi-Fi、IPv6/LAN以匹配该地区。网站仍能看到真实公网IP（Viettel/兴安）如果不使用VPN。</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -18,7 +18,7 @@
 			<key>action</key>
 			<string>randomizeRegionAuto</string>
 			<key>label</key>
-			<string>Theo IP public</string>
+			<string>根据公网IP</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -26,7 +26,7 @@
 			<key>action</key>
 			<string>randomizeRegionVN</string>
 			<key>label</key>
-			<string>Viet Nam</string>
+			<string>越南</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -34,7 +34,7 @@
 			<key>action</key>
 			<string>randomizeRegionUS</string>
 			<key>label</key>
-			<string>United States</string>
+			<string>美国</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -42,7 +42,7 @@
 			<key>action</key>
 			<string>randomizeRegionKR</string>
 			<key>label</key>
-			<string>Korea</string>
+			<string>韩国</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -50,7 +50,7 @@
 			<key>action</key>
 			<string>randomizeRegionJP</string>
 			<key>label</key>
-			<string>Japan</string>
+			<string>日本</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -58,7 +58,7 @@
 			<key>action</key>
 			<string>randomizeRegionGB</string>
 			<key>label</key>
-			<string>United Kingdom</string>
+			<string>英国</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -66,7 +66,7 @@
 			<key>action</key>
 			<string>randomizeRegionTH</string>
 			<key>label</key>
-			<string>Thailand</string>
+			<string>泰国</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -74,7 +74,7 @@
 			<key>action</key>
 			<string>randomizeRegionSG</string>
 			<key>label</key>
-			<string>Singapore</string>
+			<string>新加坡</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -82,7 +82,7 @@
 			<key>action</key>
 			<string>randomizeRegionAU</string>
 			<key>label</key>
-			<string>Australia</string>
+			<string>澳大利亚</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -90,10 +90,10 @@
 			<key>action</key>
 			<string>randomizeRegionTW</string>
 			<key>label</key>
-			<string>Taiwan</string>
+			<string>台湾</string>
 		</dict>
 	</array>
 	<key>title</key>
-	<string>Random theo vung</string>
+	<string>按地区随机生成</string>
 </dict>
 </plist>
