@@ -124,7 +124,7 @@ extern char **environ;
         @[
             @{@"kind": @"button", @"title": @"打开ChengIOS设置", @"action": @"settings"}
         ]
-    };
+    ];
 }
 
 - (void)viewDidLoad {
