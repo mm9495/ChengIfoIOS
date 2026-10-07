@@ -1,0 +1,34 @@
+Package: com.vinhnv2507.chengios
+Version: 1.2.54
+Architecture: iphoneos-arm64
+Maintainer: vinhnv2507 <vinhnv2507@users.noreply.github.com>
+Installed-Size: 3464
+Depends: firmware (>= 12.0), mobilesubstrate, preferenceloader, com.opa334.altlist
+Recommends: ldid
+Filename: debs/com.vinhnv2507.chengios_1.2.54_iphoneos-arm64.deb
+Size: 512892
+MD5sum: 2edace261810997bb6161f363115588c
+SHA1: ca947a8482467fd75acf14b319e7eb88187a947f
+SHA256: 94922d17f4eee083fdbeefdddbbf7effcb42a642800f84e3a3d4e8da8490ae1e
+Section: Tweaks
+Description: Spoofs iOS version, app version, and optional device/location/network/Wi-Fi signals per selected app. Shopee: no tweak injection (captcha-safe wipe only). Default random follows public IP.
+Author: vinhnv2507 <vinhnv2507@users.noreply.github.com>
+Name: ChengIOS
+
+Package: com.vinhnv2507.chengios
+Version: 1.2.54
+Architecture: iphoneos-arm
+Maintainer: vinhnv2507 <vinhnv2507@users.noreply.github.com>
+Installed-Size: 3464
+Depends: firmware (>= 12.0), mobilesubstrate, preferenceloader, com.opa334.altlist
+Recommends: ldid
+Filename: debs/com.vinhnv2507.chengios_1.2.54_iphoneos-arm.deb
+Size: 518628
+MD5sum: dd43ea5042a5cc04769854059fec56f9
+SHA1: d18f9baf7fd0227d7d5e945436810d76fe1c9991
+SHA256: d41d40d3a99e8c88d00bc7c0fa03b0b6a53c77fded99534839ece340dc4fbdb9
+Section: Tweaks
+Description: Spoofs iOS version, app version, and optional device/location/network/Wi-Fi signals per selected app. Shopee: no tweak injection (captcha-safe wipe only). Default random follows public IP.
+Author: vinhnv2507 <vinhnv2507@users.noreply.github.com>
+Name: ChengIOS
+
