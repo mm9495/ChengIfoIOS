@@ -31,5 +31,7 @@
 - (void)randomizeRegionSG { [self randomizeISO:@"sg" title:@"随机生成新加坡环境"]; }
 - (void)randomizeRegionAU { [self randomizeISO:@"au" title:@"随机生成澳大利亚环境"]; }
 - (void)randomizeRegionTW { [self randomizeISO:@"tw" title:@"随机生成台湾环境"]; }
-
+- (void)randomizeRegionFR { [self randomizeISO:@"fr" title:@"随机生成法国环境"]; }
+- (void)randomizeRegionES { [self randomizeISO:@"es" title:@"随机生成西班牙环境"]; }
+- (void)randomizeRegionPL { [self randomizeISO:@"pl" title:@"随机生成波兰环境"]; }
 @end
