@@ -1199,6 +1199,11 @@ NSDictionary *ChengIOSRandomFullProfileInRegion(NSString *iso) {
 NSArray<NSDictionary *> *ChengIOSRegionChoices(void) {
     return @[
         @{@"iso": @"", @"title": @"自动（根据公网IP）"},
+        @{@"iso": @"fr", @"title": @"法国"},
+        @{@"iso": @"es", @"title": @"西班牙"},
+        @{@"iso": @"pl", @"title": @"波兰"},
+        @{@"iso": @"us", @"title": @"美国"},
+        @{@"iso": @"gb", @"title": @"英国"},
         @{@"iso": @"vn", @"title": @"越南"},
         @{@"iso": @"us", @"title": @"美国"},
         @{@"iso": @"kr", @"title": @"韩国"},
