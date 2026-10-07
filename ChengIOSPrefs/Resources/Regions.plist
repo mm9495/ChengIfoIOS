@@ -10,7 +10,7 @@
 			<key>label</key>
 			<string>按地区随机生成</string>
 			<key>footerText</key>
-			<string>选择地区以填充区域设置、运营商、GPS、Wi-Fi、IPv6/LAN以匹配该地区。网站仍能看到真实公网IP（Viettel/兴安）如果不使用VPN。</string>
+			<string>选择地区以填充区域设置、运营商、GPS、Wi-Fi、IPv6/LAN以匹配该地区。支持法国、西班牙、波兰、美国、英国。</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -18,15 +18,31 @@
 			<key>action</key>
 			<string>randomizeRegionAuto</string>
 			<key>label</key>
-			<string>根据公网IP</string>
+			<string>自动（根据公网IP）</string>
 		</dict>
 		<dict>
 			<key>cell</key>
 			<string>PSButtonCell</string>
 			<key>action</key>
-			<string>randomizeRegionVN</string>
+			<string>randomizeRegionFR</string>
 			<key>label</key>
-			<string>越南</string>
+			<string>法国</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>action</key>
+			<string>randomizeRegionES</string>
+			<key>label</key>
+			<string>西班牙</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>action</key>
+			<string>randomizeRegionPL</string>
+			<key>label</key>
+			<string>波兰</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -40,57 +56,9 @@
 			<key>cell</key>
 			<string>PSButtonCell</string>
 			<key>action</key>
-			<string>randomizeRegionKR</string>
-			<key>label</key>
-			<string>韩国</string>
-		</dict>
-		<dict>
-			<key>cell</key>
-			<string>PSButtonCell</string>
-			<key>action</key>
-			<string>randomizeRegionJP</string>
-			<key>label</key>
-			<string>日本</string>
-		</dict>
-		<dict>
-			<key>cell</key>
-			<string>PSButtonCell</string>
-			<key>action</key>
 			<string>randomizeRegionGB</string>
 			<key>label</key>
 			<string>英国</string>
-		</dict>
-		<dict>
-			<key>cell</key>
-			<string>PSButtonCell</string>
-			<key>action</key>
-			<string>randomizeRegionTH</string>
-			<key>label</key>
-			<string>泰国</string>
-		</dict>
-		<dict>
-			<key>cell</key>
-			<string>PSButtonCell</string>
-			<key>action</key>
-			<string>randomizeRegionSG</string>
-			<key>label</key>
-			<string>新加坡</string>
-		</dict>
-		<dict>
-			<key>cell</key>
-			<string>PSButtonCell</string>
-			<key>action</key>
-			<string>randomizeRegionAU</string>
-			<key>label</key>
-			<string>澳大利亚</string>
-		</dict>
-		<dict>
-			<key>cell</key>
-			<string>PSButtonCell</string>
-			<key>action</key>
-			<string>randomizeRegionTW</string>
-			<key>label</key>
-			<string>台湾</string>
 		</dict>
 	</array>
 	<key>title</key>
