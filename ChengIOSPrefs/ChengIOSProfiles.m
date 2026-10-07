@@ -313,7 +313,9 @@ static NSString *CIRandomIPv4ForISO(NSString *iso) {
         nets = @[@0, @1, @1, @0];
     } else if ([code isEqualToString:@"tw"] || [code isEqualToString:@"th"] || [code isEqualToString:@"sg"]) {
         nets = @[@1, @0, @2];
-    }
+    } else if ([code isEqualToString:@"fr"] || [code isEqualToString:@"es"] || [code isEqualToString:@"pl"]) {
+    nets = @[@0, @1, @2, @3];
+    } 
     return [NSString stringWithFormat:@"192.168.%@.%lu", CIPick(nets), (unsigned long)host];
 }
 
@@ -618,6 +620,70 @@ static NSArray<NSDictionary *> *CIRegions(void) {
                 @{@"name": @"Kaohsiung", @"lat": @22.6273, @"lon": @120.3014, @"alt": @9.0, @"tz": @"Asia/Taipei"}
             ],
             @"names": @[@"iPhone", @"Wei's iPhone", @"iPhone"]
+        },
+        // 法国
+        @{
+            @"locale": @"fr_FR",
+            @"timeZone": @"Europe/Paris",
+            @"iso": @"fr",
+            @"weight": @25,
+            @"ipv6": @[@"2a01:e00::", @"2a01:e01::", @"2a02:900::"],
+            @"carriers": @[
+                @{@"name": @"Orange F", @"mcc": @"208", @"mnc": @"01"},
+                @{@"name": @"SFR", @"mcc": @"208", @"mnc": @"10"},
+                @{@"name": @"Bouygues", @"mcc": @"208", @"mnc": @"20"},
+                @{@"name": @"Free", @"mcc": @"208", @"mnc": @"15"}
+            ],
+            @"cities": @[
+                @{@"name": @"Paris", @"lat": @48.8566, @"lon": @2.3522, @"alt": @35.0, @"tz": @"Europe/Paris"},
+                @{@"name": @"Lyon", @"lat": @45.7640, @"lon": @4.8357, @"alt": @162.0, @"tz": @"Europe/Paris"},
+                @{@"name": @"Marseille", @"lat": @43.2965, @"lon": @5.3698, @"alt": @0.0, @"tz": @"Europe/Paris"},
+                @{@"name": @"Toulouse", @"lat": @43.6047, @"lon": @1.4442, @"alt": @143.0, @"tz": @"Europe/Paris"},
+                @{@"name": @"Nice", @"lat": @43.7102, @"lon": @7.2620, @"alt": @0.0, @"tz": @"Europe/Paris"}
+            ],
+            @"names": @[@\"iPhone\", @\"iPhone de Pierre\", @\"iPhone de Marie\", @\"iPhone de Jean\", @\"iPhone de Sophie\", @\"iPhone de Lucas\"]
+        },
+        // 西班牙
+        @{
+            @"locale": @"es_ES",
+            @"timeZone": @"Europe/Madrid",
+            @"iso": @"es",
+            @"weight": @15,
+            @"ipv6": @[@"2a00:700::", @"2a01:c00::", @"2a02:900::"],
+            @"carriers": @[
+                @{@"name": @"Movistar", @"mcc": @"214", @"mnc": @"01"},
+                @{@"name": @"Vodafone ES", @"mcc": @"214", @"mnc": @"01"},
+                @{@"name": @"Orange ES", @"mcc": @"214", @"mnc": @"03"}
+            ],
+            @"cities": @[
+                @{@"name": @"Madrid", @"lat": @40.4168, @"lon": @-3.7038, @"alt": @667.0, @"tz": @"Europe/Madrid"},
+                @{@"name": @"Barcelona", @"lat": @41.3851, @"lon": @2.1734, @"alt": @12.0, @"tz": @"Europe/Madrid"},
+                @{@"name": @"Valencia", @"lat": @39.4699, @"lon": @-0.3763, @"alt": @15.0, @"tz": @"Europe/Madrid"},
+                @{@"name": @"Seville", @"lat": @37.3891, @"lon": @-5.9845, @"alt": @7.0, @"tz": @"Europe/Madrid"},
+                @{@"name": @"Bilbao", @"lat": @43.2630, @"lon": @-2.9350, @"alt": @30.0, @"tz": @"Europe/Madrid"}
+            ],
+            @"names": @[@\"iPhone\", @\"iPhone de Carlos\", @\"iPhone de Maria\", @\"iPhone de Juan\", @\"iPhone de Ana\", @\"iPhone de Pedro\"]
+        },
+        // 波兰
+        @{
+            @"locale": @"pl_PL",
+            @"timeZone": @"Europe/Warsaw",
+            @"iso": @"pl",
+            @"weight": @10,
+            @"ipv6": @[@"2a00:100::", @"2a01:100::", @"2a02:100::"],
+            @"carriers": @[
+                @{@"name": @"Orange PL", @"mcc": @"260", @"mnc": @"03"},
+                @{@"name": @"T-Mobile PL", @"mcc": @"260", @"mnc": @"02"},
+                @{@"name": @"Play", @"mcc": @"260", @"mnc": @"06"}
+            ],
+            @"cities": @[
+                @{@"name": @"Warsaw", @"lat": @52.2297, @"lon": @21.0122, @"alt": @100.0, @"tz": @"Europe/Warsaw"},
+                @{@"name": @"Krakow", @"lat": @50.0647, @"lon": @19.9450, @"alt": @219.0, @"tz": @"Europe/Warsaw"},
+                @{@"name": @"Gdansk", @"lat": @54.3520, @"lon": @18.6466, @"alt": @7.0, @"tz": @"Europe/Warsaw"},
+                @{@"name": @"Wroclaw", @"lat": @51.1079, @"lon": @17.0385, @"alt": @120.0, @"tz": @"Europe/Warsaw"},
+                @{@"name": @"Poznan", @"lat": @52.4064, @"lon": @16.9252, @"alt": @60.0, @"tz": @"Europe/Warsaw"}
+            ],
+            @"names": @[@\"iPhone\", @\"iPhone Pawła\", @\"iPhone Anny\", @\"iPhone Jana\", @\"iPhone Katarzyny\", @\"iPhone Michała\"]
         }
     ];
 }
