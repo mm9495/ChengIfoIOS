@@ -641,7 +641,7 @@ static NSArray<NSDictionary *> *CIRegions(void) {
                 @{@"name": @"Toulouse", @"lat": @43.6047, @"lon": @1.4442, @"alt": @143.0, @"tz": @"Europe/Paris"},
                 @{@"name": @"Nice", @"lat": @43.7102, @"lon": @7.2620, @"alt": @0.0, @"tz": @"Europe/Paris"}
             ],
-            @"names": @[@\"iPhone\", @\"iPhone de Pierre\", @\"iPhone de Marie\", @\"iPhone de Jean\", @\"iPhone de Sophie\", @\"iPhone de Lucas\"]
+            @"names": @[@"iPhone", @"iPhone de Pierre", @"iPhone de Marie", @"iPhone de Jean", @"iPhone de Sophie", @"iPhone de Lucas"]
         },
         // 西班牙
         @{
@@ -662,7 +662,7 @@ static NSArray<NSDictionary *> *CIRegions(void) {
                 @{@"name": @"Seville", @"lat": @37.3891, @"lon": @-5.9845, @"alt": @7.0, @"tz": @"Europe/Madrid"},
                 @{@"name": @"Bilbao", @"lat": @43.2630, @"lon": @-2.9350, @"alt": @30.0, @"tz": @"Europe/Madrid"}
             ],
-            @"names": @[@\"iPhone\", @\"iPhone de Carlos\", @\"iPhone de Maria\", @\"iPhone de Juan\", @\"iPhone de Ana\", @\"iPhone de Pedro\"]
+            @"names": @[@"iPhone", @"iPhone de Carlos", @"iPhone de Maria", @"iPhone de Juan", @"iPhone de Ana", @"iPhone de Pedro"]
         },
         // 波兰
         @{
@@ -683,7 +683,7 @@ static NSArray<NSDictionary *> *CIRegions(void) {
                 @{@"name": @"Wroclaw", @"lat": @51.1079, @"lon": @17.0385, @"alt": @120.0, @"tz": @"Europe/Warsaw"},
                 @{@"name": @"Poznan", @"lat": @52.4064, @"lon": @16.9252, @"alt": @60.0, @"tz": @"Europe/Warsaw"}
             ],
-            @"names": @[@\"iPhone\", @\"iPhone Pawła\", @\"iPhone Anny\", @\"iPhone Jana\", @\"iPhone Katarzyny\", @\"iPhone Michała\"]
+            @"names": @[@"iPhone", @"iPhone Pawła", @"iPhone Anny", @"iPhone Jana", @"iPhone Katarzyny", @"iPhone Michała"]
         }
     ];
 }
